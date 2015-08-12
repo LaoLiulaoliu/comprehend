@@ -152,8 +152,8 @@
             <dt>项目职责</dt>
             <dd>1.Cassandra 配置性能调优，nodetool监控</dd>
             <dd>2.Hadoop, Hbase 安装配置使用调研</dd>
-            <dd>3.爬虫和框架代码查找bug与维护，各种问题排查</dd>
-            <dd>4.用Amazon的API动态开启机器爬取，用throttling限制API抓取淘宝速度 (舍弃用dedicate server + 动态IP代理爬取)</dd>
+            <dd>3.爬虫和分布式redis，查找bug与维护，各种问题排查</dd>
+            <dd>4.用Amazon的API动态关闭、开启机器爬取，用throttling限制API抓取淘宝速度 (舍弃用dedicate server + 动态IP代理爬取)</dd>
           </dl>
         </div>
       </li>
@@ -164,12 +164,10 @@
             <dt>项目描述</dt>
             <dd>爬取Myhabit, Gilt, Ruelala, Amazon, Bestbuy... 上的数据，抽取分类数据后，呈现于前端聚合网站</dd>
             <dt>项目职责</dt>
-            <dd>1. 用包括登录、分析JS的API、selenium、lxml dom等多种手段抓取30个国外奢侈品网站的数据</dd>
-            <dd>2. 完善、维护网站的后台监控以及监控反推程序逻辑问题</dd>
+            <dd>1. 用包括登录、分析JS的API、selenium、lxml dom等多种手段抓取30个国外奢侈品和电商网站的数据</dd>
+            <dd>2. 完善、维护网站的后台监控以及监控反推程序逻辑问题，保持数据准确干净，出每日数据报告</dd>
             <dd>3. 处理分布式框架redis、mongodb等导致的程序挂掉问题，维护系统正常运行</dd>
-            <dd>4. Amazon EC2 上部署系统，部署Ganglia监控，保证所有机器正常运行</dd>
-            <dd>5. 查找其他成员代码bug，保持数据准确干净，出每日数据报告</dd>
-            <dd>6. 承担系统开发到运行、维护的责任，出问题发skype消息</dd>
+            <dd>4. Amazon EC2 上部署系统，部署Ganglia监控，出问题发skype消息</dd>
           </dl>
         </div>
       </li>
@@ -192,7 +190,10 @@
           <h4>协议识别与阻断</h4><span class="period">( 2011.04 ~ 2011.06 )</span>
           <dl>
             <dt>项目描述</dt>
-            <dd>识别内部与外部互联网之间交换的报文协议，生成十几种协议的统计信息图像，阻断或欺骗特定网址的DNS查询。L7-filter中正则表达式进行修正，精确匹配。对RRDtool二次开发，加入现有程序生成统计图片。用信号量提高DNS欺骗的速度，修改hash函数，提高框架性能。</dd>
+            <dd>1.识别内部与外部互联网之间交换的报文协议，阻断或欺骗特定网址的DNS查询。</dd>
+            <dd>2.L7-filter中正则表达式进行修正，精确匹配。</dd>
+            <dd>3.对RRDtool二次开发，生成十几种协议的统计信息图像。</dd>
+            <dd>4.用信号量提高DNS欺骗的速度，修改hash函数，提高框架性能。</dd>
             <dt>项目职责</dt>
             <dd>所有c++代码</dd>
           </dl>

@@ -150,51 +150,52 @@
             <dt>Description</dt>
             <dd>crawl taobao, tmall data, doing statistics and show</dd>
             <dt>Duty</dt>
-            <dd>1.Cassandra 配置性能调优，nodetool监控</dd>
-            <dd>2.Hadoop, Hbase 安装配置使用调研</dd>
-            <dd>3.爬虫和框架代码查找bug与维护，各种问题排查</dd>
-            <dd>4.用Amazon的API动态开启机器爬取，用throttling限制API抓取淘宝速度 (舍弃用dedicate server + 动态IP代理爬取)</dd>
+            <dd>1.Cassandra configuration, nodetool monitor</dd>
+            <dd>2.Investigate Hadoop, Hbase configuration, installation, usage</dd>
+            <dd>3.Find bug about crawler and distributed redis</dd>
+            <dd>4.Dynamically shutdown and power on Amazon ec2 as a crawler, avoid been blocked by taobao. Also use throttling to limit the rate of crawling taobao </dd>
           </dl>
         </div>
       </li>
       <li>
         <div class="project">
-          <h4>Favbuy海外特卖汇</h4><span class="period">( 2012.08 ~ 2014.05 )</span>
+          <h4>Favbuy overseas sale</h4><span class="period">( 2012.08 ~ 2014.05 )</span>
           <dl>
-            <dt>项目描述</dt>
-            <dd>爬取Myhabit, Gilt, Ruelala, Amazon, Bestbuy... 上的数据，抽取分类数据后，呈现于前端聚合网站</dd>
-            <dt>项目职责</dt>
-            <dd>1. 用包括登录、分析JS的API、selenium、lxml dom等多种手段抓取30个国外奢侈品网站的数据</dd>
-            <dd>2. 完善、维护网站的后台监控以及监控反推程序逻辑问题</dd>
-            <dd>3. 处理分布式框架redis、mongodb等导致的程序挂掉问题，维护系统正常运行</dd>
-            <dd>4. Amazon EC2 上部署系统，部署Ganglia监控，保证所有机器正常运行</dd>
-            <dd>5. 查找其他成员代码bug，保持数据准确干净，出每日数据报告</dd>
-            <dd>6. 承担系统开发到运行、维护的责任，出问题发skype消息</dd>
+            <dt>Description</dt>
+            <dd>Crawl Myhabit, Gilt, Ruelala, Amazon, Bestbuy... , extracting, classify, aggregation, display on the web</dd>
+            <dt>Duty</dt>
+            <dd>1. Use requests+lxml, selenium, RESTfulAPI to crawl more than 30 electronic commerce website</dd>
+            <dd>2. improve and maintain backend, find bug based on running data report</dd>
+            <dd>3. Solve the problem about distributed redis and mongodb</dd>
+            <dd>4. Deploy on Amazon EC2, monitor by Ganglia, guarantee all the server normal running, problem automatically sending by skype</dd>
           </dl>
         </div>
       </li>
       <li>
         <div class="project">
-          <h4>搜索引擎原理实现</h4><span class="period">( 2012.02 ~ 2012.03 )</span>
+          <h4>Simple search engine</h4><span class="period">( 2012.02 ~ 2012.03 )</span>
           <dl>
-            <dt>项目描述</dt>
-            <dd>1. 建立线程池，爬取一定深度网页并做检索，网页用PageRank算法计算等级。</dd>
-            <dd>2. 单词的搜索和索引都使用stemming过滤。</dd>
-            <dd>3. 爬完成后dump到硬盘，爬取的内容采取增量的模式存储在硬盘中。</dd>
-            <dd>4. 搜索时，从硬盘读取数据，然后提供用户查询，用户可以查询多个单词，查询拥有cache接口。</dd>
-            <dt>项目职责</dt>
-            <dd>所有代码</dd>
+            <dt>Description</dt>
+            <dd>1. Using thread pool to crawl 9 deepth of webpage, indexing, calculate with PageRank algorithm</dd>
+            <dd>2. stemming word on webpage</dd>
+            <dd>3. dump data to disk, increasingly save on disk</dd>
+            <dd>4. restore data from disk, cache query, query multiple words</dd>
+            <dt>Duty</dt>
+            <dd>all the coding</dd>
           </dl>
         </div>
       </li>
       <li>
         <div class="project">
-          <h4>协议识别与阻断</h4><span class="period">( 2011.04 ~ 2011.06 )</span>
+          <h4>protocol recognition and block</h4><span class="period">( 2011.04 ~ 2011.06 )</span>
           <dl>
-            <dt>项目描述</dt>
-            <dd>识别内部与外部互联网之间交换的报文协议，生成十几种协议的统计信息图像，阻断或欺骗特定网址的DNS查询。L7-filter中正则表达式进行修正，精确匹配。对RRDtool二次开发，加入现有程序生成统计图片。用信号量提高DNS欺骗的速度，修改hash函数，提高框架性能。</dd>
-            <dt>项目职责</dt>
-            <dd>所有c++代码</dd>
+            <dt>Description</dt>
+            <dd>1.Packet between Internet and Intranet, Recognise the protocol, poison specified DNS query</dd>
+            <dd>2.Modify regular expression of L7-filter, precisely match specific protocol</dd>
+            <dd>3.Re-development RRDtool, generate statistical image of dozens of protocols</dd>
+            <dd>4.Modify hash function, add semaphore between two process, improve program performance and speed</dd>
+            <dt>Duty</dt>
+            <dd>all the c++ coding</dd>
           </dl>
         </div>
       </li>
