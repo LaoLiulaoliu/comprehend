@@ -63,6 +63,7 @@
   }
   #content .project dt {
     color: #757575;
+    font-size: 13px;
   }
   #content .project dd {
     color: #3a3a3a;
@@ -132,23 +133,40 @@
     <ul class="ul">
       <li>
         <div class="project">
-          <h4>病人管理与服务系统</h4><span class="period">( 2015.06 ~ - )</span>
+          <h4>病人管理与服务系统</h4><span class="period">( 2015.04 ~ - )</span>
           <dl>
-            <dd>整理业务逻辑，画网络拓扑图，画程序架构图</dd>
-            <dd>负责对接医院HIS系统，出数据获取方案，清洗与挖掘数据</dd>
+            <dd>整理业务逻辑，画网络拓扑图，画程序架构图；</dd>
+            <dd>负责对接医院HIS系统，出数据获取方案，清洗；</dd>
+            <dd>研究挖掘数据，为拿到数据后的挖掘做准备。<a target="_blank" href="https://github.com/LaoLiulaoliu/MachineLearning">[代码]</a></dd>
           </dl>
         </div>
+      </li>
+      <li>
+        <div class="project">
+          <h4>各种爬虫</h4><span class="period">( 2014.11 ~ 2015.04 )</span>
+          <dl>
+            <dt>Python(requests+lxml+cssselect)抓取好大夫网站医疗数据</dt>
+            <dd>1.网站会限制过频IP的访问，想用重启Amazon ec2的方式，想用IP代理，但公司一点预算都没有，找free proxy，检测能用的匿名代理当爬虫的IP代理。</dd>
+            <dd>2.python 的psycopg2 存取数据库很麻烦，ORM会比较耗性能，于是自己写了一个类mongodb查询的模块pgwrapper，提交pypi。</dd>
+            <dt>Python抓取万方医疗文献数据</dt>
+            <dd>1.登录破解验证码PIL处理，第一次获取的验证码是规范的像打印正楷的数字，只要切图对比就好，第二次购买账号验证码是有斑点、个别字母粘连、锯齿状边缘的，用二值化＋去低灰度点＋去孤立点＋灰度对比差粘连判别，很好切出字母。</dd>
+            <dd>2.调度分布式爬虫，去redis队列取任务，任务完成做完成标记，超时未完成重新加入队列。</dd>
+            <dd>3.抽取PDF文献作者Email，过滤。</dd>
+            <dt>Python爬CFDA药品</dt>
+            <dd>Django建立自用管理后台，修改药品</dd>
+          </dl>
       </li>
       <li>
         <div class="project">
           <h4>Ourdrs 医患互动网站后台及数据</h4><span class="period">( 2014.07 ~ 2014.12 )</span>
           <dl>
             <dt>项目描述</dt>
-            <dd>整理医患互动商业、产品逻辑，开发并改进网站 <a target=_blank href="https://ourdrs.com">https://ourdrs.com</a> </dd>
+            <dd>整理医患互动商业、产品逻辑，开发并改进网站 <a target="_blank" href="https://ourdrs.com">https://ourdrs.com</a> </dd>
             <dt>项目职责</dt>
             <dd>1.根据商业逻辑，讨论落实产品逻辑，根据产品搭建网站，负责安全和运维</dd>
-            <dd>2.网站RESTful API 形式，负责后台Ruby on Rails+grape+swagger+qiniu+smart_sms+websocket+redis+capistrano+newrelic+unicorn+factory_girl+faker+pundit <a target=_blank href="https://github.com/LaoLiulaoliu/speech">ROR开发遇到的问题</a> </dd>
-            <dd>3.Elasticsearch 搜索haodaifu上爬去的数据</dd>
+            <dd>2.网站RESTful API 形式，负责后台Ruby on Rails+grape+swagger+qiniu+smart_sms+websocket+redis+capistrano+newrelic+unicorn+factory_girl+faker+pundit <a target="_blank" href="https://github.com/LaoLiulaoliu/speech">上海Ruby年中聚会演讲slide：ROR开发遇到的问题</a> </dd>
+            <dd>3.Elasticsearch 搜索haodaifu上抓取的数据</dd>
+            <dd>4.除了百度统计外，加入对用户行为测试的同期群模型，用D3js画统计图</dd>
           </dl>
         </div>
       </li>
@@ -157,7 +175,7 @@
           <h4>Data007 淘宝店数据分析</h4><span class="period">( 2014.01 ~ 2014.05 )</span>
           <dl>
             <dt>项目描述</dt>
-            <dd>爬取淘宝天猫数据，分析聚合展示</dd>
+            <dd>爬取特定类目的淘宝天猫数据，分析聚合展示C端店铺信息</dd>
             <dt>项目职责</dt>
             <dd>1.Cassandra 配置性能调优，nodetool监控</dd>
             <dd>2.Hadoop, Hbase 安装配置使用调研</dd>
@@ -210,13 +228,18 @@
       </li>
     </ul>
 
-    <h3 class="title">期望的团队</h3>
+    <h3 class="title">期望</h3>
     <ul class="ul">
-      <li class="list">理解行业，找到切入点，有战略、产品、管理、执行力的CEO</li>
-      <li class="list">理解用户，情商高，有文案功底，能举办线下线上各种活动，能反馈产品的运营</li>
-      <li class="list">有用户研究背景的，逻辑思维强，善于倾听和表达的交互设计师</li>
-      <li class="list">审美能力强，能把企业的愿景融入设计，喜欢完美的UI设计师</li>
-      <li class="list">有架构思维的工程师，手快的工程师</li>
+      <dl>
+        <dt>希望的公司：</dt>
+        <dd>经历过两家创业公司的初创到失败，学会单独处理创业时遇到的所有技术问题，问题是公司发展不起来，业务规模起不来，应用不丰富，我的技术实践中的能力和视野就一直难以提高。所以希望到有一定规模的公司磨练，解决更多不一样业务场景下的问题。</dd>
+        <dt>理解的互联网团队：</dt>
+        <dd>产品经理能理解行业，找到切入点，有战略、产品、管理、执行力，能凝聚人;</dd>
+        <dd>运营能理解用户，情商高，有文案功底，能举办线下线上各种活动，能反馈产品;</dd>
+        <dd>交互设计师有用户研究背景，逻辑思维强，善于倾听和表达;</dd>
+        <dd>UI设计师审美能力强，能把企业的愿景融入设计，喜欢完美</dd>
+        <dd>工程师有架构思维，手快</dd>
+      </dl>
       <br>
     </ul>
     <br>
