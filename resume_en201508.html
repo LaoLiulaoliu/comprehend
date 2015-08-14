@@ -184,12 +184,12 @@
             <dt>Description</dt>
             <dd>crawl taobao, tmall data, doing statistics and show</dd>
             <dt>Duty</dt>
-            <dd>1.Based on open taobao API get all the categories we want.Two redis queue, one for shop info, the other for item info in the shop, requeue failed one. Save info to cassandra</dd>
-            <dd>2.Crawling mobile h5 page of taobao is still slow, found data in RESTful API without limiation, JsV8 engine to resolve js format data.</dd>
-            <dd>3.Reduce the crawl frequence exponentially for products and shops with no sale, cassandra is slow, so I put this strategy in redis with bit format data</dd>
-            <dd>4.Use hash_ring to realize a distributed redis, multiple similar commands use pipline of redis</dd>
-            <dd>5.Dynamically shutdown and power on Amazon ec2 as a crawler worker, avoid been blocked by taobao. Also use throttling to limit the rate of crawling taobao </dd>
-            <dd>6.Cassandra configuration, nodetool monitor, Hadoop/Hbase configuration, installation, usage</dd>
+            <dd>1. Based on open taobao API get all the categories we want.Two redis queue, one for shop info, the other for item info in the shop, requeue failed one. Save info to cassandra</dd>
+            <dd>2. Crawling mobile h5 page of taobao is still slow, found data in RESTful API without limiation, JsV8 engine to resolve js format data.</dd>
+            <dd>3. Reduce the crawl frequence exponentially for products and shops with no sale, cassandra is slow, so I put this strategy in redis with bit format data</dd>
+            <dd>4. Use hash_ring to realize a distributed redis, multiple similar commands use pipline of redis</dd>
+            <dd>5. Dynamically shutdown and power on Amazon ec2 as a crawler worker, avoid been blocked by taobao. Also use throttling to limit the rate of crawling taobao </dd>
+            <dd>6. Cassandra configuration, nodetool monitor, Hadoop/Hbase configuration, installation, usage</dd>
           </dl>
         </div>
       </li>
@@ -232,10 +232,10 @@
             <dt>Environment</dt>
             <dd>RedHat, Svn, Vim, C++(G++), L7-filter</dd>
             <dt>Description</dt>
-            <dd>1.Packet between Internet and Intranet, Recognise the protocol, poison specified DNS query</dd>
-            <dd>2.Modify regular expression of L7-filter, precisely match specific protocol</dd>
-            <dd>3.Re-development RRDtool, generate statistical image of dozens of protocols</dd>
-            <dd>4.Modify hash function, add semaphore between two process, improve program performance and speed</dd>
+            <dd>1. Packet between Internet and Intranet, Recognise the protocol, poison specified DNS query</dd>
+            <dd>2. Modify regular expression of L7-filter, precisely match specific protocol</dd>
+            <dd>3. Re-development RRDtool, generate statistical image of dozens of protocols</dd>
+            <dd>4. Modify hash function, add semaphore between two process, improve program performance and speed</dd>
             <dt>Duty</dt>
             <dd>all the c++ coding</dd>
           </dl>
