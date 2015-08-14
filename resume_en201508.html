@@ -184,10 +184,12 @@
             <dt>Description</dt>
             <dd>crawl taobao, tmall data, doing statistics and show</dd>
             <dt>Duty</dt>
-            <dd>1.Cassandra configuration, nodetool monitor</dd>
-            <dd>2.Investigate Hadoop, Hbase configuration, installation, usage</dd>
-            <dd>3.Find bug about crawler and distributed redis</dd>
-            <dd>4.Dynamically shutdown and power on Amazon ec2 as a crawler, avoid been blocked by taobao. Also use throttling to limit the rate of crawling taobao </dd>
+            <dd>1.Based on open taobao API get all the categories we want.Two redis queue, one for shop info, the other for item info in the shop, requeue failed one. Save info to cassandra</dd>
+            <dd>2.Crawling mobile h5 page of taobao is still slow, found data in RESTful API without limiation, JsV8 engine to resolve js format data.</dd>
+            <dd>3.Reduce the crawl frequence exponentially for products and shops with no sale, cassandra is slow, so I put this strategy in redis with bit format data</dd>
+            <dd>4.Use hash_ring to realize a distributed redis, multiple similar commands use pipline of redis</dd>
+            <dd>5.Dynamically shutdown and power on Amazon ec2 as a crawler worker, avoid been blocked by taobao. Also use throttling to limit the rate of crawling taobao </dd>
+            <dd>6.Cassandra configuration, nodetool monitor, Hadoop/Hbase configuration, installation, usage</dd>
           </dl>
         </div>
       </li>
