@@ -146,12 +146,13 @@
           <h4>各种爬虫</h4><span class="period">( 2014.11 ~ 2015.04 )</span>
           <dl>
             <dt>Python(requests+lxml+cssselect)抓取好大夫网站医疗数据</dt>
-            <dd>1.网站会限制过频IP的访问，想用重启Amazon ec2的方式，想用IP代理，但公司一点预算都没有，找free proxy，检测能用的匿名代理当爬虫的IP代理，检测代理速度太慢，用gevent协程并行处理。</dd>
-            <dd>2.python 的psycopg2 存取数据库很麻烦，ORM会比较耗性能，于是自己写了一个类mongodb查询的模块pgwrapper，提交pypi。</dd>
+            <dd>1. 网站会限制过频IP的访问，想用重启Amazon ec2的方式，想用IP代理，但公司一点预算都没有，找free proxy，检测能用的匿名代理当爬虫的IP代理，检测代理速度太慢，用gevent协程并行处理。</dd>
+            <dd>2. python 的psycopg2 存取数据库很麻烦，ORM会比较耗性能，于是自己写了一个类mongodb查询的模块pgwrapper，提交pypi。</dd>
             <dt>Python抓取万方医疗文献数据</dt>
-            <dd>1.登录破解验证码PIL处理，第一次获取的验证码是规范的像打印正楷的数字，只要切图对比就好，第二次购买账号验证码是有斑点、个别字母粘连、锯齿状边缘的，用二值化＋去低灰度点＋去孤立点＋灰度对比差粘连判别，很好切出字母。</dd>
-            <dd>2.调度分布式爬虫，去redis队列取任务，任务完成做完成标记，超时未完成重新加入队列。入队，重新入队，出队，分别用不同gevent协程处理，并行且省资源</dd>
-            <dd>3.抽取PDF文献作者Email，过滤。</dd>
+            <dd>1. 登录破解验证码PIL处理，第一次获取的验证码是规范的像打印正楷的数字，只要切图对比就好，第二次购买账号验证码是有斑点、个别字母粘连、锯齿状边缘的，用二值化＋去低灰度点＋去孤立点＋灰度对比差粘连判别，很好切出字母。</dd>
+            <dd>2. 调度分布式爬虫，去redis队列取任务，任务完成做完成标记，超时未完成重新加入队列。入队，重新入队，出队，分别用不同gevent协程处理，并行且省资源</dd>
+            <dd>3. 抽取PDF文献作者Email，过滤。</dd>
+            <dd>4. 打印taceback看源码、打印语句、看日志调试程序，看不出问题就用pdb单步调试，并行和并发可以记录临时log调试。</dd>
             <dt>Python爬CFDA药品</dt>
             <dd>Django建立自用管理后台，修改药品</dd>
           </dl>
@@ -163,10 +164,10 @@
             <dt>项目描述</dt>
             <dd>整理医患互动商业、产品逻辑，开发并改进网站 <a target="_blank" href="https://ourdrs.com">https://ourdrs.com</a> </dd>
             <dt>项目职责</dt>
-            <dd>1.根据商业逻辑，讨论落实产品逻辑，根据产品搭建网站，负责安全和运维</dd>
-            <dd>2.网站RESTful API 形式，负责后台Ruby on Rails+grape+swagger+qiniu+smart_sms+websocket+redis+capistrano+newrelic+unicorn+factory_girl+faker+pundit <a target="_blank" href="https://github.com/LaoLiulaoliu/speech">上海Ruby年中聚会演讲slide：ROR开发遇到的问题</a> </dd>
-            <dd>3.FactoryGirl伪造数据，rspec 完整的单元测试，每次后台修改都会自动跑一遍测试集</dd>
-            <dd>4.除了百度统计外，加入对用户行为测试的同期群模型，用D3js画统计图</dd>
+            <dd>1. 根据商业逻辑，讨论落实产品逻辑，根据产品搭建网站，负责安全和运维</dd>
+            <dd>2. 网站RESTful API 形式，负责后台Ruby on Rails+grape+swagger+qiniu+smart_sms+websocket+redis+capistrano+newrelic+unicorn+factory_girl+faker+pundit <a target="_blank" href="https://github.com/LaoLiulaoliu/speech">上海Ruby年中聚会演讲slide：ROR开发遇到的问题</a> </dd>
+            <dd>3. FactoryGirl伪造数据，rspec 完整的单元测试，每次后台修改都会自动跑一遍测试集</dd>
+            <dd>4. 除了百度统计外，加入对用户行为测试的同期群模型，用D3js画统计图</dd>
           </dl>
         </div>
       </li>
@@ -177,10 +178,11 @@
             <dt>项目描述</dt>
             <dd>爬取特定类目的淘宝天猫数据，分析聚合展示C端店铺信息</dd>
             <dt>项目职责</dt>
-            <dd>1.Cassandra 配置性能调优，nodetool监控</dd>
-            <dd>2.Hadoop, Hbase 安装配置使用调研</dd>
-            <dd>3.爬虫和分布式redis，查找bug与维护，各种问题排查</dd>
-            <dd>4.用Amazon的API动态关闭、开启机器爬取，用throttling限制API抓取淘宝速度 (舍弃用dedicate server + 动态IP代理爬取)</dd>
+            <dd>1. Cassandra 配置性能调优，nodetool监控</dd>
+            <dd>2. Hadoop, Hbase 安装配置使用调研</dd>
+            <dd>3. 爬虫和分布式redis，查找bug与维护，各种问题排查</dd>
+            <dd>4. 用Amazon的API动态关闭、开启机器爬取，用throttling限制API抓取淘宝速度 (舍弃用dedicate server + 动态IP代理爬取)</dd>
+            <dd>5. 从特定类目进入爬取每个商品售卖情况, 从开始爬手机端网页，后面发现RESTful API调用获取数据，JsV8引擎解析js格式</dd>
           </dl>
         </div>
       </li>
