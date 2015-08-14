@@ -142,6 +142,24 @@
       </li>
       <li>
         <div class="project">
+          <h4>All kinds of medical crawler</h4><span class="period">( 2014.11 ~ 2015.04 )</span>
+          <dl>
+            <dt>Environment</dt>
+            <dd>Mac(development)/Ubuntu(production), Git, Vim, Python2.7, Postgresql, Redis, Django</dd>
+            <dt>Python(requests+lxml+cssselect) crawl haodaifu.com</dt>
+            <dd>1. Website will block IP who access too frequently. I wanted to buy Amazon ec2 or IP proxy, but my boss did not give me any budget, so I found free proxy. Checking useful anonymous proxy, use gevent to solve checking slow problem.</dd>
+            <dd>2. python psycopg2 accessing DB is trivial, ORM performances is bad, I wrote a mongodb-like query module -- pgwrapper，submit to pypi</dd>
+            <dt>Python crawl wanfang medical literature data</dt>
+            <dd>1. Crack login captcha with PIL, easy number captcha just crop and compare the subimage, hard captcha have spots, adjoined jagged edge characters, use binarization, drop light gray spots, drop isolated spots, distinguish edge by gray difference</dd>
+            <dd>2. Distributed crawler, every work get tasks from redis, mark the finished one, requeue unfinished one. enqueue, dequeue, requeue, use 3 concurrent gevent coroutine</dd>
+            <dd>3. Extracting author Email of PDF, give feedback about pdfminer bug</dd>
+            <dd>4. Print, taceback, review source code, read log, pdb for debugging, parallel and concurrent program need more temporary log for debugging</dd>
+            <dt>Python crawl CFDA drugs</dt>
+            <dd>Django build a private management backend for unified drug metering</dd>
+          </dl>
+      </li>
+      <li>
+        <div class="project">
           <h4>Ourdrs website backend and data</h4><span class="period">( 2014.07 ~ 2014.12 )</span>
           <dl>
             <dt>Environment</dt>
@@ -183,7 +201,7 @@
             <dd>Crawl Myhabit, Gilt, Ruelala, Amazon, Bestbuy... , extracting, classify, aggregation, display on the web</dd>
             <dt>Duty</dt>
             <dd>1. Use requests+lxml, selenium, RESTfulAPI to crawl more than 30 electronic commerce website</dd>
-            <dd>2. improve and maintain backend, find bug based on running data report</dd>
+            <dd>2. Assure the accuracy of data, build crawler data report and everyday new products report, find crawler bug or website update page framework</dd>
             <dd>3. Solve the problem about distributed redis and mongodb</dd>
             <dd>4. Deploy on Amazon EC2, monitor by Ganglia, guarantee all the server normal running, problem automatically sending by skype</dd>
           </dl>
