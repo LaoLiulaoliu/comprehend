@@ -202,9 +202,9 @@
             <dt>项目描述</dt>
             <dd>爬取Myhabit, Gilt, Ruelala, Amazon, Bestbuy... 上的数据，抽取分类数据后，呈现于前端聚合网站</dd>
             <dt>项目职责</dt>
-            <dd>1. 用包括登录、分析JS的API、selenium、lxml dom等多种手段抓取30个国外奢侈品和电商网站的数据</dd>
+            <dd>1. 登录、分析JS API、selenium、lxml dom等多种手段抓取30个国外奢侈品和电商网站的数据</dd>
             <dd>2. 为保证数据准确性，建立爬虫数据报告和每日上新数据报告，对比原网站，寻找爬虫问题或网站更新页面框架</dd>
-            <dd>3. 处理redis、mongodb导致的程序挂掉问题，维护系统正常运行</dd>
+            <dd>3. 爬虫放在几台Server上，当作RPC server，用RPC client集中管理调用爬虫运行，所有消息发送到集中式redis处理</dd>
             <dd>4. Amazon EC2 上部署系统，部署Ganglia监控，出问题发skype消息</dd>
           </dl>
         </div>
