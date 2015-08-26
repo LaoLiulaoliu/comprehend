@@ -206,6 +206,7 @@
             <dd>2. 为保证数据准确性，建立爬虫数据报告和每日上新数据报告，对比原网站，寻找爬虫问题或网站更新页面框架</dd>
             <dd>3. 爬虫放在几台Server上，当作RPC server，用RPC client集中管理调用爬虫运行，所有消息发送到集中式redis处理</dd>
             <dd>4. Amazon EC2 上部署系统，部署Ganglia监控，出问题发skype消息</dd>
+            <dd>5. open file handler too many 问题，先修改了部署代码的ulimit，后来发现rpc client开的连接太多</dd>
           </dl>
         </div>
       </li>
