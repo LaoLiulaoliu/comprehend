@@ -216,10 +216,9 @@
             <dt>编程环境</dt>
             <dd>Debian, Github, Vim, Python3</dd>
             <dt>项目描述</dt>
-            <dd>1. 建立线程池，爬取一定深度网页并做检索，网页用PageRank算法计算等级。</dd>
-            <dd>2. 单词的搜索和索引都使用stemming过滤。</dd>
-            <dd>3. 爬完成后dump到硬盘，爬取的内容采取增量的模式存储在硬盘中。</dd>
-            <dd>4. 搜索时，从硬盘读取数据，然后提供用户查询，用户可以查询多个单词，查询拥有cache接口。</dd>
+            <dd>1. Python伪线程池，从seed page开始爬取一定深度网页，产生新网页入队。</dd>
+            <dd>2. 英文分词stemming，检索词对应url，根据本页url和外链url，迭代计算本页url的Rank。</dd>
+            <dd>3. 爬完成后dump到硬盘，搜索时，cache搜索，结果根据Rank排序，用户可以搜索多个单词。</dd>
             <dt>项目职责</dt>
             <dd>所有代码</dd>
           </dl>
