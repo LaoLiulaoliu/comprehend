@@ -184,7 +184,7 @@
             <dt>Description</dt>
             <dd>crawl taobao, tmall data, doing statistics and show</dd>
             <dt>Duty</dt>
-            <dd>1. Based on open taobao API get all the categories we want.Two redis queue, one for shop info, the other for item info in the shop, requeue failed one. Save info to cassandra</dd>
+            <dd>1. Based on open taobao API get all the categories we want.Two pipeline redis queue, one for shop info, the other for item info in the shop, requeue failed one. Save info to cassandra</dd>
             <dd>2. Crawling mobile h5 page of taobao is still slow, found data in RESTful API without limiation, JsV8 engine to resolve js format data.</dd>
             <dd>3. Reduce the crawl frequence exponentially for products and shops with no sale, cassandra is slow, so I put this strategy in redis with bit format data</dd>
             <dd>4. Use hash_ring to realize a distributed redis, multiple similar commands use pipline of redis</dd>

@@ -184,11 +184,11 @@
             <dt>项目描述</dt>
             <dd>爬取特定类目的淘宝天猫数据，分析聚合展示C端店铺信息</dd>
             <dt>项目职责</dt>
-            <dd>1. 根据淘宝开放API获得需求类目ID。两个redis队列，一个爬取类目下的店铺信息，一个爬取店铺中商品信息，爬取失败重入队列。爬取内容存入cassandra。</dd>
+            <dd>1. 根据淘宝开放API获得需求类目ID。两个pipeline redis缓存队列，一个爬取类目下的店铺信息，一个爬取店铺中商品信息，爬取失败重入队列。爬取内容存入cassandra。</dd>
             <dd>2. 爬取手机端网页有速度限制，后来发现RESTful API爬阿里CDN中的无限制的数据，JsV8引擎解析js格式</dd>
             <dd>3. 对无销量的商品和店铺，采取爬取频率指数递减的策略，减少抓取量，cassandra查询慢，此策略比特位形式数据存放redis中。</dd>
             <dd>4. Redis里面数据太多，用hash_ring的一致性哈希算法实现分布式redis，多个增删放入pipeline中一起执行</dd>
-            <dd>5. 用Amazon的API动态关闭、开启机器爬取，用throttling限制API抓取淘宝速度 (舍弃用dedicate server + 动态IP代理爬取)</dd>
+            <dd>5. 用Amazon的API动态关闭、开启百台机器爬取，用throttling限制API抓取淘宝速度 (舍弃用dedicate server + 动态IP代理爬取)</dd>
             <dd>6. Cassandra配置，nodetool监控，Hadoop/Hbase 安装配置使用调研</dd>
           </dl>
         </div>
