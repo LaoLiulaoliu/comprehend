@@ -134,13 +134,13 @@
     <ul class="ul">
       <li>
         <div class="project">
-          <h4>病人管理与服务系统</h4><span class="period">( 2015.04 ~ 2015.09 )</span>
+          <h4>病人管理与服务系统</h4><span class="period">( 2015.04 ~ 2015.12 )</span>
           <dl>
             <dt>编程环境</dt>
             <dd>Debian, Git, IntelliJ IDEA, Java+Spring+Mybatis, iPython+Jupyter+Numpy+Pandas+Seaborn+Scikit-learn</dd>
             <dd>整理业务逻辑，画网络拓扑图，画程序架构图；</dd>
             <dd>负责对接医院HIS系统，和医院沟通出数据获取方案，写数据获取代码；</dd>
-            <dd>清洗数据，可视化统计数据。机器学习算法为获知病情发展<a target="_blank" href="https://github.com/LaoLiulaoliu/MachineLearning">[代码]</a>，在应用聚类和分类算法过程中，发现维度太高，需要通过特征工程降维，但医学支持一直没到位，没有出结果。</dd>
+            <dd>清洗数据，数据探索与可视化统计。机器学习算法为获知病情发展<a target="_blank" href="https://github.com/LaoLiulaoliu/MachineLearning">[代码]</a>，在应用聚类算法过程中，发现维度太高，数据太稀疏，需要医学支持(诊断分类，药品分类，检查项提取)通过特征工程降维。</dd>
           </dl>
         </div>
       </li>
@@ -207,7 +207,7 @@
             <dt>项目职责</dt>
             <dd>1. 登录、分析JS API、selenium、lxml dom等多种手段抓取30个国外奢侈品和电商网站的数据</dd>
             <dd>2. 为保证数据准确性，建立爬虫数据报告和每日上新数据报告，对比原网站，寻找爬虫问题或网站更新页面框架</dd>
-            <dd>3. 爬虫放在几台Server上，当作RPC server，用RPC client集中管理调用爬虫运行，所有消息发送到集中式redis处理</dd>
+            <dd>3. 爬虫放在几台Server上，当作RPC server，用RPC client通过数据库结合web界面，管理爬虫运行，所有反馈消息发送到集中式redis来管控后续流程</dd>
             <dd>4. Amazon EC2 上部署系统，部署Ganglia监控，出问题发skype消息</dd>
             <dd>5. open file handler too many 问题，先修改了部署代码的ulimit，后来发现rpc client开的连接太多</dd>
           </dl>
