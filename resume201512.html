@@ -181,7 +181,7 @@
             <dd>1. 根据商业逻辑，讨论落实产品逻辑，根据产品搭建网站，包括安全和运维</dd>
             <dd>2. 网站是RESTful API + Websocket 形式的多学科专家文字会诊平台，负责后台Ruby on Rails+grape+swagger+qiniu+smart_sms+websocket+redis+capistrano+newrelic+unicorn+factory_girl+faker+pundit+websocket <a target="_blank" href="https://raw.githubusercontent.com/LaoLiulaoliu/speech/master/ror_problem.pdf">上海Ruby年中聚会演讲slide：ROR开发遇到的问题</a> </dd>
             <dd>3. FactoryGirl伪造数据，rspec 完整的单元测试，每次后台修改都会自动跑一遍测试集</dd>
-            <dd>4. 除了百度统计外，加入对用户行为测试的同期群模型，用D3js画统计图</dd>
+            <dd>4. 通过对用户行为(注册、登录、填写病例，添加主治医生)记录的同期群模型，验证产品设计的合理性，D3js出统计图</dd>
           </dl>
         </div>
       </li>
@@ -210,13 +210,15 @@
             <dt>编程环境</dt>
             <dd>Ubuntu(development)/Amazon ec2 ubuntu(production), Git-flow, Vim, Python2.7, virtualenv, mongodb, Redis, selenium</dd>
             <dt>项目描述</dt>
-            <dd>爬取Myhabit, Gilt, Ruelala, Amazon, Bestbuy... 上的数据，抽取分类数据后，呈现于前端聚合网站</dd>
+            <dd>爬取Myhabit, Gilt, Ruelala, Amazon, Bestbuy... 上的数据，抽取分类数据后，呈现于前端聚合网站，根据客户购买情况推荐商品</dd>
             <dt>项目职责</dt>
             <dd>1. 登录、分析JS API、selenium、lxml dom等多种手段抓取30个国外奢侈品和电商网站的数据</dd>
             <dd>2. 为保证数据准确性，建立爬虫数据报告和每日上新数据报告，对比原网站，寻找爬虫问题或网站更新页面框架</dd>
             <dd>3. 爬虫放在几台Server上，当作RPC server，用RPC client通过数据库结合web界面，管理爬虫运行，所有反馈消息发送到集中式redis来管控后续流程</dd>
             <dd>4. Amazon EC2 上部署系统，部署Ganglia监控，出问题发skype消息</dd>
             <dd>5. open file handler too many 问题，先修改了部署代码的ulimit，后来发现rpc client开的连接太多</dd>
+            <dd>6. 记录用户对商品的浏览，收藏，购买，分享的行为，对每个行为根据经验设置一个权重，计算用户对这个商品的喜好度，运营人员在管理后台对商品加标签，通过标签计算商品间相似度，每两小时计算一次，结果存放在redis中，用户刷新首页时，根据行为历史实时计算，top10喜好度商品相关度最高的推荐商品，推荐的商品也缓存在redis中，两小时过期。</dd>
+            <dd>改进：a. 变换行为权值，分组用户，根据分组用户对推荐商品的点击率，得出更优的权重。b. 推荐给用户所有有喜好度商品，记录用户对所有推荐商品的点击行为，再用逻辑回归计算出权重。</dd>
           </dl>
         </div>
       </li>
@@ -231,7 +233,7 @@
             <dd>2. 英文分词stemming，检索词对应url，根据本页url和外链url，迭代计算本页url的Rank。</dd>
             <dd>3. 爬完成后dump到硬盘，搜索时，cache搜索，结果根据Rank排序，用户可以搜索多个单词。</dd>
             <dt>项目职责</dt>
-            <dd>所有代码</dd>
+            <dd>主程</dd>
           </dl>
         </div>
       </li>
@@ -247,7 +249,7 @@
             <dd>3. 对RRDtool二次开发，生成十几种协议的统计信息图像。</dd>
             <dd>4. 用信号量提高DNS欺骗的速度，修改hash函数，提高框架性能。</dd>
             <dt>项目职责</dt>
-            <dd>所有c++代码</dd>
+            <dd>维护与更新代码</dd>
           </dl>
         </div>
       </li>
