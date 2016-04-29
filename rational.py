@@ -29,7 +29,8 @@ class Rational(object):
         ret = self.gcd(_numerator, _denominator)
         self.numerator = _numerator // ret
         self.denominator = _denominator // ret
-        return self
+#        return self
+        return Rational(self.numerator, self.denominator)
 
     def __str__(self):
         ret = self.gcd(self.numerator, self.denominator)
