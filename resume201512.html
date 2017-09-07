@@ -110,7 +110,7 @@
     <h3 class="title">工作经历</h3>
     <ul class="ul">
 
-      <li class="list">2016年03月 – 2017年02月  上海海知智能科技有限公司  爬虫框架，知识图谱，自然语言处理，运维</li>
+      <li class="list">2016年03月 – 2017年02月  上海海知智能科技有限公司  分布式爬虫框架，知识图谱存储设计（mongo数据结构，mongo自动同步ES），自然语言处理，运维管理(ELK维护，rancher搭建docker平台，系统监控，问题查找)</li>
       <li class="list">2014年07月 – 2015年12月  和杰健康咨询  爬虫，网站，部署运维，数据分析与机器学习</li>
       <li class="list">2012年05月 – 2014年06月  Favbuy(Shanghai) corporation  Distributed crawlers, Web backend, DevOps, Data processing</li>
       <li class="list">2010年01月 – 2011年12月  南京烽火星空通讯发展有限公司  网络安全研发</li>
@@ -118,6 +118,7 @@
 
     <h3 class="title">自我简介与评估</h3>
     <ul class="ul">
+        <li class="">☆ 扎实的算法和数据结构基础，熟悉多种OS和编程语言，良好的编程思维模式，有一些架构和管理经验。</li>
         <li class="">☆ 优秀的沟通(英文)、表达、分析、推进能力，团队合作精神，有全局观的问题解决者。</li>
         <li class="">☆ 4次参与创业公司产品从conception到launch的阶段，有程序、商业、产品思维，敢面对，能坚持。</li>
         <li class="">☆ 组队参加阿里天池新浪微博互动预测大赛，在2293支队伍中获得188名。</li>
@@ -128,7 +129,7 @@
     <h3 class="title">技能</h3>
     <ul class="ul">
       <li class="skill">Language: Python(5Years), Gcc/G++(18Month), Ruby(6Month), Shell/sed/awk(2Years), Java(2Month), JS/Jquery(1Month), C#(1Month)</li>
-      <li class="skill">Database: Postgresql/Mysql, Mongo, Elasticsearch, Redis, Cassandra, Spark</li>
+      <li class="skill">Database: Postgresql/Mysql, Mongo, Elasticsearch, Redis, Cassandra, Hadoop/Hbase, (ELK, Kafka, Spark)</li>
       <li class="skill">Network: TCP/IP, 网络安全(libnids/libnet, 深度包检测，旁路DNS欺骗，Email Bomb，ARP Cheating)</li>
       <li class="skill">OS: Unix/Linux 9年开发使用维护经验</li>
       <li class="skill">Crawler: 高并发、可扩展、分布式、易监控的爬虫框架。</li>
@@ -146,7 +147,7 @@
           <h4>爬虫框架</h4><span class="period">( 2016.05 ~ 2016.06 )</span>
           <dl>
             <dt>编程环境</dt>
-            <dd>Ubuntu, Git, Redis, Vim, Python</dd>
+            <dd>Ubuntu, Git, Redis, Vim, Python, Fabric</dd>
             <dt>大规模、分布式爬虫框架</dt>
             <dd>1. 大规模、可更新、缓存数据、定期爬取。</dd>
             <dd>2. 实现了分布式redis队列，aws ec2/s3 的API，通用下载代码等。</dd>
@@ -178,7 +179,7 @@
           <h4>各种爬虫</h4><span class="period">( 2014.11 ~ 2015.04 )</span>
           <dl>
             <dt>编程环境</dt>
-            <dd>Ubuntu, Git, Postgresql, Redis, Django, Vim, Python</dd>
+            <dd>Ubuntu, Git, Postgresql, Redis, Django, Vim, Python, Nginx, Gunicorn</dd>
             <dt>抓取好大夫网站医疗数据</dt>
             <dd>1. 网站会限制过频IP的访问，想用重启Amazon ec2的方式，想用IP代理，但公司没预算，找free proxy，检测能用的匿名代理当爬虫的IP代理，大量代理检查速度慢，用gevent协程并行处理。</dd>
             <dd>2. python 的psycopg2 存取数据库很麻烦，ORM会比较耗性能，于是自己写了一个类mongodb查询的模块pgwrapper<a target="_blank" href="https://github.com/LaoLiulaoliu/pgwrapper">[代码]</a>，提交pypi。</dd>
@@ -221,7 +222,7 @@
             <dd>3. 对无销量的商品和店铺，采取爬取频率指数递减的策略，减少抓取量，cassandra查询慢，此策略比特位形式数据存放redis中。</dd>
             <dd>4. Redis里面数据太多，用hash_ring的一致性哈希算法实现分布式redis，多个增删放入pipeline中一起执行</dd>
             <dd>5. 用Amazon的API动态关闭、开启百台机器爬取，用throttling限制API抓取淘宝速度 (舍弃用dedicate server + 动态IP代理爬取)</dd>
-            <dd>6. Cassandra配置，nodetool监控，Hadoop/Hbase 安装配置使用调研</dd>
+            <dd>6. Cassandra配置，nodetool监控，Hadoop/Hbase 安装配置使用调研，Cassandra/Hbase使用都挺方便简单，由于Cassandra运维比较方便，最后选择Cassandra</dd>
           </dl>
         </div>
       </li>
