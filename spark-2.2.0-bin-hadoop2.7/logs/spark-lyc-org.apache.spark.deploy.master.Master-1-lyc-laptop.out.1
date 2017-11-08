@@ -1,0 +1,70 @@
+Spark Command: /usr/local/java/jdk1.8.0_112/bin/java -cp /usr/local/spark/spark-2.2.0-bin-hadoop2.7/conf/:/usr/local/spark/spark-2.2.0-bin-hadoop2.7/jars/*:/usr/local/hadoop/hadoop-2.8.1/etc/hadoop/ -Xmx1g org.apache.spark.deploy.master.Master --host lyc-laptop --port 7077 --webui-port 8080
+========================================
+17/11/04 23:08:32 INFO master.Master: Started daemon with process name: 8153@lyc-laptop
+17/11/04 23:08:34 INFO util.SignalUtils: Registered signal handler for TERM
+17/11/04 23:08:34 INFO util.SignalUtils: Registered signal handler for HUP
+17/11/04 23:08:34 INFO util.SignalUtils: Registered signal handler for INT
+17/11/04 23:08:36 WARN master.MasterArguments: SPARK_MASTER_IP is deprecated, please use SPARK_MASTER_HOST
+17/11/04 23:08:43 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/11/04 23:08:44 INFO spark.SecurityManager: Changing view acls to: lyc
+17/11/04 23:08:44 INFO spark.SecurityManager: Changing modify acls to: lyc
+17/11/04 23:08:44 INFO spark.SecurityManager: Changing view acls groups to: 
+17/11/04 23:08:44 INFO spark.SecurityManager: Changing modify acls groups to: 
+17/11/04 23:08:47 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(lyc); groups with view permissions: Set(); users  with modify permissions: Set(lyc); groups with modify permissions: Set()
+17/11/04 23:09:03 INFO util.Utils: Successfully started service 'sparkMaster' on port 7077.
+17/11/04 23:09:04 INFO master.Master: Starting Spark master at spark://lyc-laptop:7077
+17/11/04 23:09:04 INFO master.Master: Running Spark version 2.2.0
+17/11/04 23:09:04 INFO util.log: Logging initialized @53628ms
+17/11/04 23:09:05 INFO server.Server: jetty-9.3.z-SNAPSHOT
+17/11/04 23:09:05 INFO server.Server: Started @54117ms
+17/11/04 23:09:06 WARN util.Utils: Service 'MasterUI' could not bind on port 8080. Attempting port 8081.
+17/11/04 23:09:06 WARN util.Utils: Service 'MasterUI' could not bind on port 8081. Attempting port 8082.
+17/11/04 23:09:06 INFO server.AbstractConnector: Started ServerConnector@35ee98d2{HTTP/1.1,[http/1.1]}{0.0.0.0:8082}
+17/11/04 23:09:06 INFO util.Utils: Successfully started service 'MasterUI' on port 8082.
+17/11/04 23:09:06 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1715ed7c{/app,null,AVAILABLE,@Spark}
+17/11/04 23:09:06 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7f21c4d6{/app/json,null,AVAILABLE,@Spark}
+17/11/04 23:09:06 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@53cdf288{/,null,AVAILABLE,@Spark}
+17/11/04 23:09:06 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7c4e9220{/json,null,AVAILABLE,@Spark}
+17/11/04 23:09:06 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@17c0f15a{/static,null,AVAILABLE,@Spark}
+17/11/04 23:09:06 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@33fd5344{/app/kill,null,AVAILABLE,@Spark}
+17/11/04 23:09:06 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3e4823fd{/driver/kill,null,AVAILABLE,@Spark}
+17/11/04 23:09:06 INFO ui.MasterWebUI: Bound MasterWebUI to 0.0.0.0, and started at http://192.168.2.200:8082
+17/11/04 23:09:06 INFO server.Server: jetty-9.3.z-SNAPSHOT
+17/11/04 23:09:06 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6da0e5a5{/,null,AVAILABLE}
+17/11/04 23:09:06 INFO server.AbstractConnector: Started ServerConnector@7388b53e{HTTP/1.1,[http/1.1]}{lyc-laptop:6066}
+17/11/04 23:09:06 INFO server.Server: Started @55728ms
+17/11/04 23:09:06 INFO util.Utils: Successfully started service on port 6066.
+17/11/04 23:09:06 INFO rest.StandaloneRestServer: Started REST server for submitting applications on port 6066
+17/11/04 23:09:07 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@100a10d1{/metrics/master/json,null,AVAILABLE,@Spark}
+17/11/04 23:09:07 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7043168e{/metrics/applications/json,null,AVAILABLE,@Spark}
+17/11/04 23:09:07 INFO master.Master: I have been elected leader! New state: ALIVE
+17/11/04 23:09:07 INFO master.Master: Registering worker 192.168.2.200:45555 with 8 cores, 2.0 GB RAM
+17/11/04 23:09:15 INFO master.Master: Registering worker 192.168.2.202:43620 with 1 cores, 2.0 GB RAM
+17/11/04 23:09:30 INFO master.Master: Registering worker 192.168.2.201:42247 with 1 cores, 2.0 GB RAM
+17/11/05 01:54:12 INFO master.Master: 192.168.2.201:46962 got disassociated, removing it.
+17/11/05 01:54:14 INFO master.Master: 192.168.2.201:42247 got disassociated, removing it.
+17/11/05 01:54:14 INFO master.Master: Removing worker worker-20171104080922-192.168.2.201-42247 on 192.168.2.201:42247
+17/11/05 01:54:19 INFO master.Master: 192.168.2.202:60742 got disassociated, removing it.
+17/11/05 01:54:19 INFO master.Master: 192.168.2.202:43620 got disassociated, removing it.
+17/11/05 01:54:19 INFO master.Master: Removing worker worker-20171104230912-192.168.2.202-43620 on 192.168.2.202:43620
+17/11/05 02:13:53 INFO master.Master: Registering worker 192.168.2.202:36870 with 1 cores, 2.0 GB RAM
+17/11/05 02:13:56 INFO master.Master: Registering worker 192.168.2.201:41637 with 1 cores, 2.0 GB RAM
+17/11/05 02:20:44 INFO master.Master: Registering app AirCheckOnline
+17/11/05 02:20:44 INFO master.Master: Registered app AirCheckOnline with ID app-20171105022044-0000
+17/11/05 02:20:45 INFO master.Master: Launching executor app-20171105022044-0000/0 on worker worker-20171104230903-192.168.2.200-45555
+17/11/05 02:20:45 INFO master.Master: Launching executor app-20171105022044-0000/1 on worker worker-20171105021350-192.168.2.202-36870
+17/11/05 02:20:45 INFO master.Master: Launching executor app-20171105022044-0000/2 on worker worker-20171104111351-192.168.2.201-41637
+17/11/05 02:21:06 INFO master.Master: Received unregister request from application app-20171105022044-0000
+17/11/05 02:21:06 INFO master.Master: Removing app app-20171105022044-0000
+17/11/05 02:21:06 WARN master.Master: Got status update for unknown executor app-20171105022044-0000/0
+17/11/05 02:21:06 INFO master.Master: 192.168.2.200:54604 got disassociated, removing it.
+17/11/05 02:21:06 INFO master.Master: 192.168.2.200:37828 got disassociated, removing it.
+17/11/05 02:21:06 WARN master.Master: Got status update for unknown executor app-20171105022044-0000/1
+17/11/05 02:21:07 WARN master.Master: Got status update for unknown executor app-20171105022044-0000/2
+17/11/05 02:30:47 INFO master.Master: 192.168.2.201:45014 got disassociated, removing it.
+17/11/05 02:30:47 INFO master.Master: 192.168.2.201:41637 got disassociated, removing it.
+17/11/05 02:30:47 INFO master.Master: Removing worker worker-20171104111351-192.168.2.201-41637 on 192.168.2.201:41637
+17/11/05 02:30:55 INFO master.Master: 192.168.2.202:33448 got disassociated, removing it.
+17/11/05 02:30:55 INFO master.Master: 192.168.2.202:36870 got disassociated, removing it.
+17/11/05 02:30:55 INFO master.Master: Removing worker worker-20171105021350-192.168.2.202-36870 on 192.168.2.202:36870
+17/11/05 02:31:06 ERROR master.Master: RECEIVED SIGNAL TERM

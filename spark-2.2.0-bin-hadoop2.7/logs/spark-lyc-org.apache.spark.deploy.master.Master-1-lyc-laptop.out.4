@@ -1,0 +1,50 @@
+Spark Command: /usr/local/java/jdk1.8.0_112/bin/java -cp /usr/local/spark/spark-2.2.0-bin-hadoop2.7/conf/:/usr/local/spark/spark-2.2.0-bin-hadoop2.7/jars/*:/usr/local/hadoop/hadoop-2.8.1/etc/hadoop/ -Xmx1g org.apache.spark.deploy.master.Master --host lyc-laptop --port 7077 --webui-port 8080
+========================================
+17/10/30 00:32:27 INFO master.Master: Started daemon with process name: 10711@lyc-laptop
+17/10/30 00:32:29 INFO util.SignalUtils: Registered signal handler for TERM
+17/10/30 00:32:29 INFO util.SignalUtils: Registered signal handler for HUP
+17/10/30 00:32:29 INFO util.SignalUtils: Registered signal handler for INT
+17/10/30 00:32:29 WARN master.MasterArguments: SPARK_MASTER_IP is deprecated, please use SPARK_MASTER_HOST
+17/10/30 00:32:47 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/10/30 00:32:49 INFO spark.SecurityManager: Changing view acls to: lyc
+17/10/30 00:32:50 INFO spark.SecurityManager: Changing modify acls to: lyc
+17/10/30 00:32:50 INFO spark.SecurityManager: Changing view acls groups to: 
+17/10/30 00:32:51 INFO spark.SecurityManager: Changing modify acls groups to: 
+17/10/30 00:32:51 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(lyc); groups with view permissions: Set(); users  with modify permissions: Set(lyc); groups with modify permissions: Set()
+17/10/30 00:33:03 INFO util.Utils: Successfully started service 'sparkMaster' on port 7077.
+17/10/30 00:33:04 INFO master.Master: Starting Spark master at spark://lyc-laptop:7077
+17/10/30 00:33:04 INFO master.Master: Running Spark version 2.2.0
+17/10/30 00:33:06 INFO util.log: Logging initialized @64761ms
+17/10/30 00:33:07 INFO server.Server: jetty-9.3.z-SNAPSHOT
+17/10/30 00:33:07 INFO server.Server: Started @65508ms
+17/10/30 00:33:09 WARN util.Utils: Service 'MasterUI' could not bind on port 8080. Attempting port 8081.
+17/10/30 00:33:09 WARN util.Utils: Service 'MasterUI' could not bind on port 8081. Attempting port 8082.
+17/10/30 00:33:09 INFO server.AbstractConnector: Started ServerConnector@5d2bab19{HTTP/1.1,[http/1.1]}{0.0.0.0:8082}
+17/10/30 00:33:09 INFO util.Utils: Successfully started service 'MasterUI' on port 8082.
+17/10/30 00:33:09 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2386b50b{/app,null,AVAILABLE,@Spark}
+17/10/30 00:33:09 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3b4e7692{/app/json,null,AVAILABLE,@Spark}
+17/10/30 00:33:09 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5bf43b4f{/,null,AVAILABLE,@Spark}
+17/10/30 00:33:09 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3cad5a0a{/json,null,AVAILABLE,@Spark}
+17/10/30 00:33:09 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4218fca3{/static,null,AVAILABLE,@Spark}
+17/10/30 00:33:09 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@53406b62{/app/kill,null,AVAILABLE,@Spark}
+17/10/30 00:33:09 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4c9ef740{/driver/kill,null,AVAILABLE,@Spark}
+17/10/30 00:33:09 INFO ui.MasterWebUI: Bound MasterWebUI to 0.0.0.0, and started at http://192.168.2.200:8082
+17/10/30 00:33:09 INFO server.Server: jetty-9.3.z-SNAPSHOT
+17/10/30 00:33:09 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@26ff61d9{/,null,AVAILABLE}
+17/10/30 00:33:09 INFO server.AbstractConnector: Started ServerConnector@35d3f694{HTTP/1.1,[http/1.1]}{lyc-laptop:6066}
+17/10/30 00:33:09 INFO server.Server: Started @68265ms
+17/10/30 00:33:09 INFO util.Utils: Successfully started service on port 6066.
+17/10/30 00:33:09 INFO rest.StandaloneRestServer: Started REST server for submitting applications on port 6066
+17/10/30 00:33:10 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@70e401b9{/metrics/master/json,null,AVAILABLE,@Spark}
+17/10/30 00:33:10 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4da2e55b{/metrics/applications/json,null,AVAILABLE,@Spark}
+17/10/30 00:33:10 INFO master.Master: I have been elected leader! New state: ALIVE
+17/10/30 00:33:10 INFO master.Master: Registering worker 192.168.2.200:38743 with 8 cores, 2.0 GB RAM
+17/10/30 00:33:21 INFO master.Master: Registering worker 192.168.2.202:37705 with 1 cores, 2.0 GB RAM
+17/10/30 00:33:21 INFO master.Master: Registering worker 192.168.2.201:39987 with 1 cores, 2.0 GB RAM
+17/10/30 00:59:39 INFO master.Master: 192.168.2.201:59534 got disassociated, removing it.
+17/10/30 00:59:39 INFO master.Master: 192.168.2.201:39987 got disassociated, removing it.
+17/10/30 00:59:39 INFO master.Master: Removing worker worker-20171029093318-192.168.2.201-39987 on 192.168.2.201:39987
+17/10/30 00:59:48 INFO master.Master: 192.168.2.202:45438 got disassociated, removing it.
+17/10/30 00:59:48 INFO master.Master: 192.168.2.202:37705 got disassociated, removing it.
+17/10/30 00:59:48 INFO master.Master: Removing worker worker-20171030003317-192.168.2.202-37705 on 192.168.2.202:37705
+17/10/30 01:00:12 ERROR master.Master: RECEIVED SIGNAL TERM

@@ -1,0 +1,127 @@
+Spark Command: /usr/local/java/jdk1.8.0_112/bin/java -cp /usr/local/spark/spark-2.2.0-bin-hadoop2.7/conf/:/usr/local/spark/spark-2.2.0-bin-hadoop2.7/jars/*:/usr/local/hadoop/hadoop-2.8.1/etc/hadoop/ -Xmx1g org.apache.spark.deploy.master.Master --host lyc-laptop --port 7077 --webui-port 8080
+========================================
+17/10/29 17:47:39 INFO master.Master: Started daemon with process name: 25707@lyc-laptop
+17/10/29 17:47:39 INFO util.SignalUtils: Registered signal handler for TERM
+17/10/29 17:47:39 INFO util.SignalUtils: Registered signal handler for HUP
+17/10/29 17:47:39 INFO util.SignalUtils: Registered signal handler for INT
+17/10/29 17:47:39 WARN master.MasterArguments: SPARK_MASTER_IP is deprecated, please use SPARK_MASTER_HOST
+17/10/29 17:47:40 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/10/29 17:47:40 INFO spark.SecurityManager: Changing view acls to: lyc
+17/10/29 17:47:40 INFO spark.SecurityManager: Changing modify acls to: lyc
+17/10/29 17:47:40 INFO spark.SecurityManager: Changing view acls groups to: 
+17/10/29 17:47:40 INFO spark.SecurityManager: Changing modify acls groups to: 
+17/10/29 17:47:40 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(lyc); groups with view permissions: Set(); users  with modify permissions: Set(lyc); groups with modify permissions: Set()
+17/10/29 17:47:41 INFO util.Utils: Successfully started service 'sparkMaster' on port 7077.
+17/10/29 17:47:41 INFO master.Master: Starting Spark master at spark://lyc-laptop:7077
+17/10/29 17:47:41 INFO master.Master: Running Spark version 2.2.0
+17/10/29 17:47:41 INFO util.log: Logging initialized @6722ms
+17/10/29 17:47:41 INFO server.Server: jetty-9.3.z-SNAPSHOT
+17/10/29 17:47:41 INFO server.Server: Started @6801ms
+17/10/29 17:47:41 WARN util.Utils: Service 'MasterUI' could not bind on port 8080. Attempting port 8081.
+17/10/29 17:47:41 INFO server.AbstractConnector: Started ServerConnector@2c92ffe5{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+17/10/29 17:47:41 INFO util.Utils: Successfully started service 'MasterUI' on port 8081.
+17/10/29 17:47:41 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4c73817c{/app,null,AVAILABLE,@Spark}
+17/10/29 17:47:41 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4f9d628a{/app/json,null,AVAILABLE,@Spark}
+17/10/29 17:47:41 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@aa5d668{/,null,AVAILABLE,@Spark}
+17/10/29 17:47:41 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@d90f7d4{/json,null,AVAILABLE,@Spark}
+17/10/29 17:47:41 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5b9c2609{/static,null,AVAILABLE,@Spark}
+17/10/29 17:47:41 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7f8c01d6{/app/kill,null,AVAILABLE,@Spark}
+17/10/29 17:47:41 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@eff7474{/driver/kill,null,AVAILABLE,@Spark}
+17/10/29 17:47:41 INFO ui.MasterWebUI: Bound MasterWebUI to 0.0.0.0, and started at http://192.168.2.200:8081
+17/10/29 17:47:41 INFO server.Server: jetty-9.3.z-SNAPSHOT
+17/10/29 17:47:41 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3277182b{/,null,AVAILABLE}
+17/10/29 17:47:41 INFO server.AbstractConnector: Started ServerConnector@6eaf58ae{HTTP/1.1,[http/1.1]}{lyc-laptop:6066}
+17/10/29 17:47:41 INFO server.Server: Started @6983ms
+17/10/29 17:47:41 INFO util.Utils: Successfully started service on port 6066.
+17/10/29 17:47:41 INFO rest.StandaloneRestServer: Started REST server for submitting applications on port 6066
+17/10/29 17:47:41 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@58b3d8{/metrics/master/json,null,AVAILABLE,@Spark}
+17/10/29 17:47:41 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5bb8157e{/metrics/applications/json,null,AVAILABLE,@Spark}
+17/10/29 17:47:42 INFO master.Master: I have been elected leader! New state: ALIVE
+17/10/29 17:47:42 INFO master.Master: Registering worker 192.168.2.200:40125 with 8 cores, 2.0 GB RAM
+17/10/29 17:47:42 INFO master.Master: Registering worker 192.168.2.201:41745 with 1 cores, 2.0 GB RAM
+17/10/29 17:47:45 INFO master.Master: Registering worker 192.168.2.202:37250 with 1 cores, 2.0 GB RAM
+17/10/29 17:52:00 INFO master.Master: Registering app BigJoin_ShopPay
+17/10/29 17:52:00 INFO master.Master: Registered app BigJoin_ShopPay with ID app-20171029175200-0000
+17/10/29 17:52:00 INFO master.Master: Launching executor app-20171029175200-0000/0 on worker worker-20171029174741-192.168.2.200-40125
+17/10/29 17:52:00 INFO master.Master: Launching executor app-20171029175200-0000/1 on worker worker-20171029024740-192.168.2.201-41745
+17/10/29 17:52:00 INFO master.Master: Launching executor app-20171029175200-0000/2 on worker worker-20171029174743-192.168.2.202-37250
+17/10/29 17:52:24 INFO master.Master: Removing executor app-20171029175200-0000/1 because it is EXITED
+17/10/29 17:52:24 INFO master.Master: Launching executor app-20171029175200-0000/3 on worker worker-20171029024740-192.168.2.201-41745
+17/10/29 17:52:24 INFO master.Master: 192.168.2.200:55298 got disassociated, removing it.
+17/10/29 17:52:24 INFO master.Master: 192.168.2.200:44853 got disassociated, removing it.
+17/10/29 17:52:24 INFO master.Master: Removing app app-20171029175200-0000
+17/10/29 17:52:24 WARN master.Master: Got status update for unknown executor app-20171029175200-0000/3
+17/10/29 17:52:26 WARN master.Master: Got status update for unknown executor app-20171029175200-0000/2
+17/10/29 17:52:26 WARN master.Master: Got status update for unknown executor app-20171029175200-0000/0
+17/10/29 18:09:40 INFO master.Master: Registering app BigJoin_ShopPay
+17/10/29 18:09:40 INFO master.Master: Registered app BigJoin_ShopPay with ID app-20171029180940-0001
+17/10/29 18:09:40 INFO master.Master: Launching executor app-20171029180940-0001/0 on worker worker-20171029174741-192.168.2.200-40125
+17/10/29 18:09:40 INFO master.Master: Launching executor app-20171029180940-0001/1 on worker worker-20171029024740-192.168.2.201-41745
+17/10/29 18:09:40 INFO master.Master: Launching executor app-20171029180940-0001/2 on worker worker-20171029174743-192.168.2.202-37250
+17/10/29 18:09:50 INFO master.Master: Received unregister request from application app-20171029180940-0001
+17/10/29 18:09:50 INFO master.Master: Removing app app-20171029180940-0001
+17/10/29 18:09:50 WARN master.Master: Got status update for unknown executor app-20171029180940-0001/1
+17/10/29 18:09:50 WARN master.Master: Got status update for unknown executor app-20171029180940-0001/0
+17/10/29 18:09:51 INFO master.Master: 192.168.2.200:56706 got disassociated, removing it.
+17/10/29 18:09:51 INFO master.Master: 192.168.2.200:43905 got disassociated, removing it.
+17/10/29 18:09:51 WARN master.Master: Got status update for unknown executor app-20171029180940-0001/2
+17/10/29 18:10:40 INFO master.Master: Registering app BigJoin_ShopPay
+17/10/29 18:10:40 INFO master.Master: Registered app BigJoin_ShopPay with ID app-20171029181040-0002
+17/10/29 18:10:40 INFO master.Master: Launching executor app-20171029181040-0002/0 on worker worker-20171029174741-192.168.2.200-40125
+17/10/29 18:10:40 INFO master.Master: Launching executor app-20171029181040-0002/1 on worker worker-20171029024740-192.168.2.201-41745
+17/10/29 18:10:40 INFO master.Master: Launching executor app-20171029181040-0002/2 on worker worker-20171029174743-192.168.2.202-37250
+17/10/29 18:10:55 INFO master.Master: Removing executor app-20171029181040-0002/1 because it is EXITED
+17/10/29 18:10:55 INFO master.Master: Launching executor app-20171029181040-0002/3 on worker worker-20171029024740-192.168.2.201-41745
+17/10/29 18:10:55 INFO master.Master: Received unregister request from application app-20171029181040-0002
+17/10/29 18:10:55 INFO master.Master: Removing app app-20171029181040-0002
+17/10/29 18:10:57 WARN master.Master: Got status update for unknown executor app-20171029181040-0002/0
+17/10/29 18:10:57 INFO master.Master: 192.168.2.200:56772 got disassociated, removing it.
+17/10/29 18:10:57 INFO master.Master: 192.168.2.200:34793 got disassociated, removing it.
+17/10/29 18:10:57 WARN master.Master: Got status update for unknown executor app-20171029181040-0002/2
+17/10/29 18:10:59 WARN master.Master: Got status update for unknown executor app-20171029181040-0002/3
+17/10/29 18:12:41 INFO master.Master: Registering app BigJoin_ShopPay
+17/10/29 18:12:41 INFO master.Master: Registered app BigJoin_ShopPay with ID app-20171029181241-0003
+17/10/29 18:12:41 INFO master.Master: Launching executor app-20171029181241-0003/0 on worker worker-20171029174741-192.168.2.200-40125
+17/10/29 18:12:41 INFO master.Master: Launching executor app-20171029181241-0003/1 on worker worker-20171029024740-192.168.2.201-41745
+17/10/29 18:12:41 INFO master.Master: Launching executor app-20171029181241-0003/2 on worker worker-20171029174743-192.168.2.202-37250
+17/10/29 18:12:55 INFO master.Master: Removing executor app-20171029181241-0003/1 because it is EXITED
+17/10/29 18:12:55 INFO master.Master: Launching executor app-20171029181241-0003/3 on worker worker-20171029024740-192.168.2.201-41745
+17/10/29 18:12:56 INFO master.Master: Received unregister request from application app-20171029181241-0003
+17/10/29 18:12:56 INFO master.Master: Removing app app-20171029181241-0003
+17/10/29 18:12:56 WARN master.Master: Got status update for unknown executor app-20171029181241-0003/3
+17/10/29 18:12:59 INFO master.Master: 192.168.2.200:56818 got disassociated, removing it.
+17/10/29 18:12:59 INFO master.Master: 192.168.2.200:41755 got disassociated, removing it.
+17/10/29 18:12:59 WARN master.Master: Got status update for unknown executor app-20171029181241-0003/0
+17/10/29 18:12:59 WARN master.Master: Got status update for unknown executor app-20171029181241-0003/2
+17/10/29 18:14:40 INFO master.Master: Registering app BigJoin_ShopPay
+17/10/29 18:14:40 INFO master.Master: Registered app BigJoin_ShopPay with ID app-20171029181440-0004
+17/10/29 18:14:40 INFO master.Master: Launching executor app-20171029181440-0004/0 on worker worker-20171029174741-192.168.2.200-40125
+17/10/29 18:14:40 INFO master.Master: Launching executor app-20171029181440-0004/1 on worker worker-20171029024740-192.168.2.201-41745
+17/10/29 18:14:40 INFO master.Master: Launching executor app-20171029181440-0004/2 on worker worker-20171029174743-192.168.2.202-37250
+17/10/29 18:14:52 INFO master.Master: Received unregister request from application app-20171029181440-0004
+17/10/29 18:14:52 INFO master.Master: Removing app app-20171029181440-0004
+17/10/29 18:14:52 INFO master.Master: 192.168.2.200:56854 got disassociated, removing it.
+17/10/29 18:14:52 INFO master.Master: 192.168.2.200:34535 got disassociated, removing it.
+17/10/29 18:14:52 WARN master.Master: Got status update for unknown executor app-20171029181440-0004/1
+17/10/29 18:14:52 WARN master.Master: Got status update for unknown executor app-20171029181440-0004/2
+17/10/29 18:14:56 WARN master.Master: Got status update for unknown executor app-20171029181440-0004/0
+17/10/29 18:16:02 INFO master.Master: Registering app BigJoin_ShopPay
+17/10/29 18:16:02 INFO master.Master: Registered app BigJoin_ShopPay with ID app-20171029181602-0005
+17/10/29 18:16:02 INFO master.Master: Launching executor app-20171029181602-0005/0 on worker worker-20171029174741-192.168.2.200-40125
+17/10/29 18:16:02 INFO master.Master: Launching executor app-20171029181602-0005/1 on worker worker-20171029024740-192.168.2.201-41745
+17/10/29 18:16:02 INFO master.Master: Launching executor app-20171029181602-0005/2 on worker worker-20171029174743-192.168.2.202-37250
+17/10/29 18:16:13 INFO master.Master: Received unregister request from application app-20171029181602-0005
+17/10/29 18:16:13 INFO master.Master: Removing app app-20171029181602-0005
+17/10/29 18:16:14 INFO master.Master: 192.168.2.200:56884 got disassociated, removing it.
+17/10/29 18:16:14 INFO master.Master: 192.168.2.200:39250 got disassociated, removing it.
+17/10/29 18:16:14 WARN master.Master: Got status update for unknown executor app-20171029181602-0005/1
+17/10/29 18:16:14 WARN master.Master: Got status update for unknown executor app-20171029181602-0005/2
+17/10/29 18:16:17 WARN master.Master: Got status update for unknown executor app-20171029181602-0005/0
+17/10/29 23:06:39 WARN master.Master: Got status update for unknown executor app-20171029175200-0000/1
+17/10/29 23:06:39 INFO master.Master: 192.168.2.201:36222 got disassociated, removing it.
+17/10/29 23:06:39 INFO master.Master: 192.168.2.201:41745 got disassociated, removing it.
+17/10/29 23:06:39 INFO master.Master: Removing worker worker-20171029024740-192.168.2.201-41745 on 192.168.2.201:41745
+17/10/29 23:06:46 INFO master.Master: 192.168.2.202:48108 got disassociated, removing it.
+17/10/29 23:06:46 INFO master.Master: 192.168.2.202:37250 got disassociated, removing it.
+17/10/29 23:06:46 INFO master.Master: Removing worker worker-20171029174743-192.168.2.202-37250 on 192.168.2.202:37250
+17/10/29 23:08:03 ERROR master.Master: RECEIVED SIGNAL TERM

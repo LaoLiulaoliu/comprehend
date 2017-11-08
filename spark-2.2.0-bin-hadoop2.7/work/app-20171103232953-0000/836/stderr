@@ -1,0 +1,3 @@
+17/11/03 23:44:20 INFO executor.CoarseGrainedExecutorBackend: Started daemon with process name: 6329@lyc-laptop
+17/11/03 23:44:20 INFO util.SignalUtils: Registered signal handler for TERM
+ with process name: 6329@lyc-laptop
