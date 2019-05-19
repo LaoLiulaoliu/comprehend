@@ -34,7 +34,5 @@ Clark:
 - clark从小只和大孩子玩，因为大孩子懂得多，可这反而造成领导力缺失和依赖。
 
 
-### Resume
-
-[Resume](https://github.com/LaoLiulaoliu/comprehend/blob/master/resume201508.html)
+### [Resume](https://laoliulaoliu.github.io/comprehend/resume201508.html)
 
