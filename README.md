@@ -34,11 +34,7 @@ Clark:
 - clark从小只和大孩子玩，因为大孩子懂得多，可这反而造成领导力缺失和依赖。
 
 
-### How should clark do ?
+### Resume
 
-To be or not to be ?
-
-    Clark is a programmer, he should read a lot of programming books.
-    Now he should read several psychology books.
-    The most important thing is to finding the reason to explain all the world again.
+[Resume](https://github.com/LaoLiulaoliu/comprehend/blob/master/resume201508.html)
 
