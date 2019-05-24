@@ -113,7 +113,7 @@
     <ul class="ul">
 
       <li class="list">2017年09月 – 2019年05月  西安中软国际汇丰线 AWS 搭建安全合规的业务平台(lambda+cloudwatch+IAM)，hbase+hive POC，mulesoft下写API，优化开发流程效率的自动化工具 </li>
-      <li class="list">2016年03月 – 2017年02月  上海海知智能科技有限公司  敏捷开发，分布式爬虫框架，知识图谱存储设计（mongo数据结构，mongo自动同步ES），运维管理(ELK维护，rancher搭建docker平台，系统监控，问题查找)</li>
+      <li class="list">2016年03月 – 2017年02月  上海海知智能科技有限公司  敏捷开发，分布式爬虫框架，和复旦合作开发知识图谱，图谱存储设计（mongo数据结构，mongo自动同步ES），运维管理(ELK维护，rancher搭建docker平台，系统监控，问题查找)</li>
       <li class="list">2014年07月 – 2015年12月  和杰健康咨询  爬虫，网站，部署运维，数据分析与机器学习</li>
       <li class="list">2012年05月 – 2014年06月  Favbuy(Shanghai) corporation  Distributed crawlers, Web backend, DevOps, Data processing</li>
       <li class="list">2010年01月 – 2011年12月  南京烽火星空通讯发展有限公司  网络安全研发</li>
@@ -186,7 +186,7 @@
             <dd>Ubuntu, Git, Postgresql, Redis, Django, Vim, Python, Nginx, Gunicorn</dd>
             <dt>抓取好大夫网站医疗数据</dt>
             <dd>1. 网站会限制过频IP的访问，想用重启Amazon ec2的方式，想用IP代理，但公司没预算，找free proxy，检测能用的匿名代理当爬虫的IP代理，大量代理检查速度慢，用gevent协程并行处理。</dd>
-            <dd>2. python 的psycopg2 存取数据库很麻烦，ORM会比较耗性能，于是自己写了一个类mongodb查询的模块pgwrapper<a target="_blank" href="https://github.com/LaoLiulaoliu/pgwrapper">[代码]</a>，提交pypi。</dd>
+            <dd>2. python 的psycopg2 存取数据库很麻烦，ORM会比较耗性能，于是自己写了一个类mongodb查询的模块pgwrapper<a target="_blank" href="https://github.com/LaoLiulaoliu/pgwrapper">[代码]</a>，已开源并提交pypi。</dd>
             <dt>Python抓取万方医疗文献数据</dt>
             <dd>1. 登录破解验证码PIL处理，第一次获取的验证码是规范的像打印正楷的数字，只要切图对比就好，第二次购买账号验证码是有斑点、个别字母粘连、锯齿状边缘的，用二值化＋去低灰度点＋去孤立点＋灰度对比差粘连判别，很好切出字母。</dd>
             <dd>2. 调度分布式爬虫，去redis队列取任务，任务完成做完成标记，超时未完成重新加入队列。入队，重新入队，出队，分别用不同gevent协程处理，并行且省资源。</dd>
