@@ -134,7 +134,7 @@
       <li class="skill">Database: Postgresql/Mysql, sharding MongoDB, sharding Redis, Elasticsearch </li>
       <li class="skill">Architecture: Amazon ecs/eks, Amazon lambda serverless</li>
       <li class="skill">BigData: Cassandra, Hadoop/Hbase, ELK, Spark</li>
-      <li class="skill">Network: TCP/IP, 网络安全(深度包检测，旁路DNS欺骗，Email Bomb，ARP Cheating)</li>
+      <li class="skill">Network: TCP/IP, 网络安全(深度包检测，旁路协议识别阻断，Email Bomb，ARP Cheating)</li>
       <li class="skill">OS: Unix/Linux 14年开发使用维护经验</li>
       <li class="skill">Crawler: 高并发、可扩展、分布式、易监控的爬虫框架。</li>
       <li class="skill">Web: Django, Tornado, Ruby on Rails, RESTful API, Spring+mybatis </li>
@@ -185,23 +185,7 @@
       </li>
       <li>
         <div class="project">
-          <h4>Ourdrs 医患互动网站后台及数据</h4><span class="period">( 2014.07 ~ 2014.12 )</span>
-          <dl>
-            <dt>编程环境</dt>
-            <dd>Mac(development)/Aliyun ubuntu(production), Qiniu Yun, Git-flow, Ruby on Rails, Postgresql, Redis, ElasticSearch, Vim</dd>
-            <dt>项目描述</dt>
-            <dd>整理医患互动商业、产品逻辑，开发并改进网站 <a target="_blank" href="https://ourdrs.com">https://ourdrs.com</a> </dd>
-            <dt>项目职责</dt>
-            <dd>1. 根据商业逻辑，讨论落实产品逻辑，根据产品搭建网站，包括安全和运维</dd>
-            <dd>2. 网站是RESTful API + Websocket 形式的多学科专家文字会诊平台，负责后台Ruby on Rails+grape+swagger+qiniu+smart_sms+websocket+redis+capistrano+newrelic+unicorn+factory_girl+faker+pundit+websocket <a target="_blank" href="https://raw.githubusercontent.com/LaoLiulaoliu/speech/master/ror_problem.pdf">上海Ruby年中聚会演讲slide：ROR开发遇到的问题</a> </dd>
-            <dd>3. FactoryGirl伪造数据，rspec 完整的单元测试，每次后台修改都会自动跑一遍测试集</dd>
-            <dd>4. 通过对用户行为(注册、登录、填写病例，添加主治医生)记录的同期群模型，验证产品设计的合理性，D3js出统计图</dd>
-          </dl>
-        </div>
-      </li>
-      <li>
-        <div class="project">
-          <h4>Data007 淘宝店数据分析</h4><span class="period">( 2014.01 ~ 2014.05 )</span>
+          <h4>Data007 淘宝店大数据分析</h4><span class="period">( 2014.01 ~ 2014.05 )</span>
           <dl>
             <dt>编程环境</dt>
             <dd>Amazon ec2 ubuntu(production), Git-flow, Vim, Python2.7, virtualenv, Redis, Cassandra</dd>
@@ -241,24 +225,22 @@
             <dd>1. Python伪线程池，从seed page开始爬取一定深度网页，产生新网页入队。</dd>
             <dd>2. 英文分词stemming，url内容生成倒排索引，根据本页url和外链url，迭代计算各url的Rank。</dd>
             <dd>3. 爬完成后dump到硬盘，搜索时，cache搜索，结果根据Rank排序，用户可以搜索多个单词。未使用TF-IDF</dd>
-            <dt>项目职责</dt>
-            <dd>主程</dd>
           </dl>
         </div>
       </li>
       <li>
         <div class="project">
-          <h4>协议识别与阻断</h4><span class="period">( 2011.04 ~ 2011.06 )</span>
+          <h4>Ourdrs 医患互动网站后台及数据</h4><span class="period">( 2014.07 ~ 2014.12 )</span>
           <dl>
             <dt>编程环境</dt>
-            <dd>RedHat, Svn, Vim, C++(G++), L7-filter</dd>
+            <dd>Mac(development)/Aliyun ubuntu(production), Qiniu Yun, Git-flow, Ruby on Rails, Postgresql, Redis, ElasticSearch, Vim</dd>
             <dt>项目描述</dt>
-            <dd>1. 识别内部与外部互联网之间交换的报文协议，阻断或欺骗特定网址的DNS查询。</dd>
-            <dd>2. L7-filter中正则表达式进行修正，精确匹配。</dd>
-            <dd>3. 对RRDtool二次开发，生成十几种协议的统计信息图像。</dd>
-            <dd>4. 用信号量提高DNS欺骗的速度，修改hash函数，提高框架性能。</dd>
+            <dd>整理医患互动商业、产品逻辑，开发并改进网站 <a target="_blank" href="https://ourdrs.com">https://ourdrs.com</a> </dd>
             <dt>项目职责</dt>
-            <dd>维护与更新代码</dd>
+            <dd>1. 根据商业逻辑，讨论落实产品逻辑，根据产品搭建网站，包括安全和运维</dd>
+            <dd>2. 网站是RESTful API + Websocket 形式的多学科专家文字会诊平台，负责后台Ruby on Rails+grape+swagger+qiniu+smart_sms+websocket+redis+capistrano+newrelic+unicorn+factory_girl+faker+pundit+websocket <a target="_blank" href="https://raw.githubusercontent.com/LaoLiulaoliu/speech/master/ror_problem.pdf">上海Ruby年中聚会演讲slide：ROR开发遇到的问题</a> </dd>
+            <dd>3. FactoryGirl伪造数据，rspec 完整的单元测试，每次后台修改都会自动跑一遍测试集</dd>
+            <dd>4. 通过对用户行为(注册、登录、填写病例，添加主治医生)记录的同期群模型，验证产品设计的合理性，D3js出统计图</dd>
           </dl>
         </div>
       </li>
