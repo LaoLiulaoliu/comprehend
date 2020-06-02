@@ -112,7 +112,7 @@
     <h3 class="title">工作经历</h3>
     <ul class="ul">
 
-      <li class="list">2017年09月 – 2019年11月  西安中软国际汇丰线 AWS 安全合规微服务架构，hbase+hive POC，开发效能自动化工具</li>
+      <li class="list">2017年09月 – 2019年11月  西安中软国际汇丰线 AWS 安全合规微服务架构，大数据调研和应用</li>
       <li class="list">2016年03月 – 2017年02月  上海海知智能科技有限公司  分布式爬虫框架，知识图谱存储设计（mongo+ES），运维管理(ELK，系统监控)</li>
       <li class="list">2014年07月 – 2015年12月  和杰健康咨询  机器学习</li>
       <li class="list">2012年05月 – 2014年06月  Favbuy(Shanghai) corporation  Distributed crawlers, Web backend, DevOps, Data processing</li>
@@ -138,7 +138,7 @@
       <li class="skill">OS: Unix/Linux 14年开发使用维护经验</li>
       <li class="skill">Crawler: 高并发、可扩展、分布式、易监控的爬虫框架。</li>
       <li class="skill">Web: Django, Tornado, Ruby on Rails, RESTful API, Spring+mybatis </li>
-      <li class="skill">Machine Learning: 分类(knn, decision tree, logistic regression, Naive Bayes)、聚类(kmeans)、回归(linear regression)、推荐等算法，特征工程(特征选择，特征变换，特征提取)和算法降维(PCA, SVD)<a target="_blank" href="https://github.com/LaoLiulaoliu/MachineLearning">[代码]</a>。参加kaggle，阿里天池比赛。</li>
+      <li class="skill">Machine Learning: CNN,RNN,迁移学习，语义分割，分类(knn, decision tree, logistic regression, Naive Bayes)、聚类(kmeans)、回归(linear regression)、推荐等算法，特征工程(特征选择，特征变换，特征提取)和算法降维(PCA, SVD)<a target="_blank" href="https://github.com/LaoLiulaoliu/MachineLearning">[代码]</a>。参加kaggle，阿里天池比赛。</li>
       <li class="skill">Strategy: 敏捷开发，用户体验，设计用户行为统计以迭代优化产品。</li>
       <li class="skill">Management: 面试、管理3人团队、架构。</li>
     </ul>
@@ -147,13 +147,26 @@
     <ul class="ul">
       <li>
         <div class="project">
+          <h4>汇丰项目经历</h4><span class="period">( 2017.09 ~ 2019.10 )</span>
+          <dl>
+            <dt>编程环境</dt>
+            <dd>Macbook, Github, AWS, Mongodb, Cassandra, Hbase, Python, Nodejs</dd>
+            <dt>项目描述</dt>
+            <dd>1. 调研应用了AWS上部署使用分布式mongodb，Cassandra，Hbase+Hive。mongodb根据经验有一些丢数据的风险，Cassandra运维比较方便，Hbase+Hive应用比较广。最后选择Cassandra，放了几亿数据量，nodetool监控。</dd>
+            <dd>2. 汇丰小商贷业务上云，部署AWS微服务架构，银行级别安全合规权限控制</dd>
+            <dd>3. 用20%兴趣研究时间，AWS server用ResNet, DenseNet做了ensemble学习图片多分类。学习了单发多框SSD，语义分割FCN，样式迁移，RNN和TextCNN训练文本情感分类</dd>
+          </dl>
+        </div>
+      </li>
+      <li>
+        <div class="project">
           <h4>爬虫框架</h4><span class="period">( 2016.05 ~ 2016.06 )</span>
           <dl>
             <dt>编程环境</dt>
             <dd>Ubuntu, Git, Redis, Vim, Python, Fabric, Supervisor</dd>
             <dt>大规模、分布式爬虫框架</dt>
             <dd>1. 大规模、可更新、缓存数据、定期爬取。</dd>
-            <dd>2. 实现了分布式redis队列，AWS ec2建立调度爬虫集群，AWS S3 缓存层，通用下载代码等。</dd>
+            <dd>2. 实现了分布式redis队列一致性哈希算法，多个增删放入pipeline中一起执行。AWS ec2建立调度爬虫集群，AWS S3 缓存层，通用下载代码等。</dd>
             <dd>4. 配置和特殊页面分析代码就能完成一个爬虫。</dd>
             <dt>tornado代理池服务</dt>
             <dd>1. 购买代理服务获取大量IP，代理API方便易得，实时更新，就没有做备份和blacklist的工作。</dd>
@@ -161,12 +174,13 @@
             <dt>缓存服务，可以保存网页，并追溯爬取内容</dt>
             <dd>1. 做了基于文件系统、数据库、ucloud文件服务、aws s3服务的4种形式的缓存服务。</dd>
             <dd>2. 每一批爬取内容可以根据ID存入不同的cache中，一个URL存一条记录。</dd>
-            <dd>3. 爬虫太多，每个爬虫作为一个server分布式执行，爬取失败重新入队。taceback打印日志、调试程序</dd>
+            <dd>3. 动态重启百台机器爬取，每个爬虫作为一个server分布式执行，爬取失败重新入队，throttling限制API抓取速度。taceback打印日志、调试程序</dd>
 
             <dt>一些问题解决方案 </dt>
             <dd>1. python 的psycopg2 存取数据库很麻烦，ORM比较耗性能，自己写了一个类mongodb查询的模块pgwrapper<a target="_blank" href="https://github.com/LaoLiulaoliu/pgwrapper">[代码]</a>，已开源并提交pypi。</dd>
-            <dd>2. 登录破解验证码PIL处理，第一次获取的验证码是规范的像打印正楷的数字，只要切图对比就好，第二次购买账号验证码是有斑点、个别字母粘连、锯齿状边缘的，用二值化＋去低灰度点＋去孤立点＋灰度对比差粘连判别，很好切出字母。</dd>
+            <dd>2. 破解验证码PIL处理，规范的正楷数字验证码，只要切图对比就好；验证码是有斑点、个别字母粘连、锯齿状边缘的，用二值化＋去低灰度点＋去孤立点＋灰度对比差粘连判别，很好切出字母。</dd>
             <dd>3. open file handler too many 问题，redis server开的连接太多，修改ulimit</dd>
+            <dd>4. JsV8引擎解析js格式</dd>
           </dl>
       </li>
       <li>
@@ -175,43 +189,26 @@
           <dl>
             <dt>编程环境</dt>
             <dd>Debian, Git, IntelliJ IDEA, Postgresql, Java+SpringMVC+Mybatis, iPython+Jupyter+Numpy+Pandas+Seaborn+Scikit-learn</dd>
-            <dd>1. 整理业务逻辑，画网络拓扑图，画程序架构图；</dd>
-            <dd>2. 负责对接医院HIS系统，和医院沟通出数据获取方案，写数据获取代码；洗数据，数据探索与可视化统计。</dd>
-            <dd>3. 建立回访网站，连接病人数据。</dd>
-            <dd>4. 聚类算法得到用户分类，线性回归算法得到用户病情发展情况。病人一次门诊或住院的检查、诊断、用药为一条数据，清洗并数值化数据后，运用聚类和线性回归算法计算。</dd>
-            <dd>5. 问题：数据维度太高，太稀疏，需要医学支持来完成特征工程，需要诊断分类，药品分类，检查项提取。</dd>
+            <dd>1. 整理业务逻辑，对接医院HIS系统，和医院沟通数据获取方案，画网络拓扑图，画程序架构图，建立回访网站，连接病人数据；</dd>
+            <dd>2. 洗数据，数据探索与可视化统计。</dd>
+            <dd>3. 聚类算法得到用户分类，线性回归算法得到用户病情发展情况。病人一次门诊或住院的检查、诊断、用药为一条数据，清洗并数值化数据后，运用聚类和线性回归算法计算。</dd>
+            <dd>4. 数据维度太高，太稀疏，处理missing value，最好有医学支持来完成特征工程，需要诊断分类，药品分类，检查项提取。</dd>
+            <dd>5. 问题：数据太稀疏，连续多次看病的情况少，难以预测用药后的病情发展。</dd>
           </dl>
         </div>
       </li>
       <li>
         <div class="project">
-          <h4>Data007 淘宝店大数据分析</h4><span class="period">( 2014.01 ~ 2014.05 )</span>
-          <dl>
-            <dt>编程环境</dt>
-            <dd>Amazon ec2 ubuntu(production), Git-flow, Vim, Python2.7, virtualenv, Redis, Cassandra</dd>
-            <dt>项目描述</dt>
-            <dd>爬取特定类目的淘宝天猫数据，分析聚合展示C端店铺信息</dd>
-            <dt>项目职责</dt>
-            <dd>1. 根据淘宝开放API获得需求类目ID。两个pipeline redis缓存队列，一个爬取类目下的店铺信息，一个爬取店铺中商品信息，爬取失败重入队列。爬取内容存入cassandra。</dd>
-            <dd>2. 爬取手机端网页有速度限制，后来发现RESTful API爬阿里CDN中的无限制的数据，JsV8引擎解析js格式</dd>
-            <dd>3. 对无销量的商品和店铺，采取爬取频率指数递减的策略，减少抓取量，cassandra查询慢，此策略比特位形式数据存放redis中。</dd>
-            <dd>4. Redis里面数据太多，用hash_ring的一致性哈希算法实现分布式redis，多个增删放入pipeline中一起执行</dd>
-            <dd>5. 用Amazon的API动态关闭、开启百台机器爬取，用throttling限制API抓取淘宝速度 (舍弃用dedicate server + 动态IP代理爬取)</dd>
-            <dd>6. Cassandra配置，nodetool监控，Hadoop/Hbase 安装配置使用调研，Cassandra/Hbase使用都挺方便简单，由于Cassandra运维比较方便，最后选择Cassandra</dd>
-          </dl>
-        </div>
-      </li>
-      <li>
-        <div class="project">
-          <h4>Favbuy海外特卖汇推荐引擎</h4><span class="period">( 2012.08 ~ 2014.05 )</span>
+          <h4>海外特卖推荐系统</h4><span class="period">( 2012.08 ~ 2014.05 )</span>
           <dl>
             <dt>编程环境</dt>
             <dd>Amazon ec2 ubuntu(production), Git-flow, Vim, Python2.7, virtualenv, mongodb, Redis, selenium</dd>
             <dt>项目描述</dt>
             <dd>爬取Myhabit, Gilt, Ruelala, Amazon, Bestbuy... 30个电商网站数据，抽取分类数据后，呈现于前端聚合网站，根据客户购买情况推荐商品</dd>
             <dt>项目职责</dt>
-            <dd>1. 记录用户对商品的浏览，收藏，购买，分享的行为，对每个行为根据经验设置一个权重，计算用户对这个商品的喜好度，运营人员在管理后台对商品加标签，通过标签计算商品间相似度，每两小时计算一次，结果存放在redis中，用户刷新首页时，根据行为历史实时计算，top10喜好度商品相关度最高的推荐商品，推荐的商品也缓存在redis中，两小时过期。</dd>
-            <dd>改进：a. 变换行为权值，分组用户，根据分组用户对推荐商品的点击率，得出更优的权重。b. 推荐给用户所有有喜好度商品，记录用户对所有推荐商品的点击行为，再用逻辑回归计算出权重。</dd>
+            <dd>1. 记录用户对商品的浏览，收藏，购买，分享的行为，对每个行为根据经验设置一个权重，计算用户对这个商品的喜好度，运营人员在管理后台对商品加标签，通过标签计算商品间余弦相似度，每两小时计算一次，结果存放在redis中，用户刷新首页时，根据行为历史实时计算，top10喜好度商品相关度最高的推荐商品，推荐的商品也缓存在redis中，两小时过期。</dd>
+            <dd>2. 通过对用户行为(注册、登录、进入类目、浏览商品)记录的同期群模型，验证产品设计的合理性，D3js出统计图</dd>
+            <dd>改进：a. 变换行为权值，分组用户，根据分组用户对推荐商品的点击率(同期群模型)，得出更优的权重。b. 推荐给用户所有喜好商品，记录用户对所有推荐商品的点击行为，再用逻辑回归计算改进标签权重。</dd>
           </dl>
         </div>
       </li>
@@ -223,24 +220,9 @@
             <dd>Debian, Github, Vim, Python3</dd>
             <dt>项目描述</dt>
             <dd>1. Python伪线程池，从seed page开始爬取一定深度网页，产生新网页入队。</dd>
-            <dd>2. 英文分词stemming，url内容生成倒排索引，根据本页url和外链url，迭代计算各url的Rank。</dd>
-            <dd>3. 爬完成后dump到硬盘，搜索时，cache搜索，结果根据Rank排序，用户可以搜索多个单词。未使用TF-IDF</dd>
-          </dl>
-        </div>
-      </li>
-      <li>
-        <div class="project">
-          <h4>Ourdrs 医患互动网站后台及数据</h4><span class="period">( 2014.07 ~ 2014.12 )</span>
-          <dl>
-            <dt>编程环境</dt>
-            <dd>Mac(development)/Aliyun ubuntu(production), Qiniu Yun, Git-flow, Ruby on Rails, Postgresql, Redis, ElasticSearch, Vim</dd>
-            <dt>项目描述</dt>
-            <dd>整理医患互动商业、产品逻辑，开发并改进网站 <a target="_blank" href="https://ourdrs.com">https://ourdrs.com</a> </dd>
-            <dt>项目职责</dt>
-            <dd>1. 根据商业逻辑，讨论落实产品逻辑，根据产品搭建网站，包括安全和运维</dd>
-            <dd>2. 网站是RESTful API + Websocket 形式的多学科专家文字会诊平台，负责后台Ruby on Rails+grape+swagger+qiniu+smart_sms+websocket+redis+capistrano+newrelic+unicorn+factory_girl+faker+pundit+websocket <a target="_blank" href="https://raw.githubusercontent.com/LaoLiulaoliu/speech/master/ror_problem.pdf">上海Ruby年中聚会演讲slide：ROR开发遇到的问题</a> </dd>
-            <dd>3. FactoryGirl伪造数据，rspec 完整的单元测试，每次后台修改都会自动跑一遍测试集</dd>
-            <dd>4. 通过对用户行为(注册、登录、填写病例，添加主治医生)记录的同期群模型，验证产品设计的合理性，D3js出统计图</dd>
+            <dd>2. 英文分词stemming，url 和内容生成倒排索引，根据本页url和外链url，迭代计算各url的Rank。</dd>
+            <dd>3. 爬完成后对单词计算TF-IDF</dd>
+            <dd>4. 爬取结果dump到硬盘，搜索时，cache搜索，结果根据Rank*TF-IDF排序，用户可以搜索多个单词。</dd>
           </dl>
         </div>
       </li>
