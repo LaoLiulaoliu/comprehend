@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>刘垣德的简历</title>
-  <meta name="keywords" content="算法，架构，机器学习，深度学习，西安，简历">
+  <meta name="keywords" content="算法，架构，大数据，西安，简历">
   <meta name="description" content="刘垣德的简历">
   
   <style type="text/css">
@@ -107,11 +107,11 @@
     <h3 class="title">技能</h3>
     <ul class="ul">
       <li class="skill">Language: Python, Java, Gcc/G++, Shell/sed/awk, nodejs, html+css+js, Ruby, C#</li>
-      <li class="skill">Machine Learning: CNN,RNN,迁移学习，语义分割，分类(knn, decision tree, logistic regression, Naive Bayes)、聚类(kmeans)、回归(linear regression)、推荐等算法，特征工程(特征选择，特征变换，特征提取)和算法降维(PCA, SVD)<a target="_blank" href="https://github.com/LaoLiulaoliu/MachineLearning">[代码]</a>。参加kaggle，阿里天池比赛。</li>
       <li class="skill">Database: Postgresql/Mysql, sharding MongoDB, sharding Redis, Elasticsearch </li>
       <li class="skill">Architecture: Amazon ecs/eks, Amazon lambda serverless</li>
       <li class="skill">BigData: Cassandra, Hadoop/Hbase, ELK, Spark</li>
       <li class="skill">Web: Spring+mybatis, Django, Tornado, Ruby on Rails, RESTful API </li>
+      <li class="skill">Machine Learning: CNN,RNN,迁移学习，语义分割，分类(knn, decision tree, logistic regression, Naive Bayes)、聚类(kmeans)、回归(linear regression)、推荐等算法，特征工程(特征选择，特征变换，特征提取)和算法降维(PCA, SVD)<a target="_blank" href="https://github.com/LaoLiulaoliu/MachineLearning">[代码]</a>。参加kaggle，阿里天池比赛。</li>
       <li class="skill">Crawler: 高并发、可伸缩、分布式、易监控的爬虫框架。</li>
       <li class="skill">Devops: Jenkins, Terraform, Ansible</li>
       <li class="skill">OS: Unix/Linux 14年开发使用维护经验</li>
@@ -129,9 +129,10 @@
             <dt>编程环境</dt>
             <dd>Macbook, Github, AWS, Mongodb, Cassandra, Hbase, Java, Python, Nodejs</dd>
             <dt>项目描述</dt>
-            <dd>1. 调研应用了AWS上部署分布式mongodb，Cassandra，Hbase+Hive。Java写了应用代码，mongodb根据经验有一些丢数据的风险，Cassandra运维比较方便，Hbase+Hive应用比较广。最后选择Cassandra，放了几亿数据量，nodetool监控。</dd>
-            <dd>2. 汇丰上云商贷应用架构，银行级安全稳定架构，大容量，可伸缩。Terraform部署架构。应用AWS组建，CloudFront+APIGateway+Cognito+Lambda+Aurora+DynamoDB+CloudWatch+KMS+VPC</dd>
-            <dd>3. 用20%兴趣研究时间，AWS server用ResNet, DenseNet做了ensemble学习图片多分类。学习了单发多框SSD，语义分割FCN，样式迁移，RNN和TextCNN训练文本情感分类，参加Kaggle竞赛</dd>
+            <dd>1. 调研应用了AWS上部署分布式mongodb，Cassandra，Hbase+Hive。Java写了应用代码，mongodb根据经验有一些丢数据的风险，Cassandra运维比较方便，nodetool监控，Hbase+Hive应用比较广。</dd>
+            <dd>2.用户访问行为大数据，存储与按条件搜索。Flume读取用户行为日志数据，解析正则存入Hbase，Hive创建外部表，增量读取Hbase数据存入Elasticsearch。Flume存入Mongodb，Java写了解析器，把用户从Elasticsearch的query查找转换到mongodb的查找</dd>
+            <dd>3. 汇丰上云商贷应用架构，银行级安全稳定架构，大容量，可伸缩。Terraform部署架构。应用AWS组建，CloudFront+APIGateway+Cognito+Lambda+Aurora+DynamoDB+CloudWatch+KMS+VPC</dd>
+            <dd>4. 用20%兴趣研究时间，AWS server用ResNet, DenseNet做了ensemble学习图片多分类。学习了单发多框SSD，语义分割FCN，样式迁移，RNN和TextCNN训练文本情感分类，参加Kaggle竞赛</dd>
           </dl>
         </div>
       </li>
@@ -168,7 +169,7 @@
             <dd>Debian, Git, IntelliJ IDEA, Postgresql, Java+SpringMVC+Mybatis, iPython+Jupyter+Numpy+Pandas+Seaborn+Scikit-learn</dd>
             <dt>项目描述</dt>
             <dd>1. 整理业务逻辑，对接医院HIS系统，和医院沟通数据获取方案，画网络拓扑图，画程序架构图，基于Java建立回访网站，连接病人数据,，入数据库；</dd>
-            <dd>2. 洗数据，数据探索与可视化统计。</dd>
+            <dd>2. 洗数据，数据探索与可视化统计，建立数据预处理规则。</dd>
             <dd>3. 聚类算法得到用户分类，线性回归算法得到用户病情发展情况。病人一次门诊或住院的检查、诊断、用药为一条数据，清洗并数值化数据后，运用聚类和线性回归算法计算。</dd>
             <dd>4. 数据维度太高，太稀疏，处理missing value，最好有医学支持来完成特征工程，需要诊断分类，药品分类，检查项提取。</dd>
             <dd>5. 问题：数据太稀疏，连续多次看病的情况少，难以预测用药后的病情发展。</dd>
@@ -184,7 +185,7 @@
             <dt>项目描述</dt>
             <dd>爬取Myhabit, Gilt, Ruelala, Amazon, Bestbuy... 30个电商网站数据，抽取分类数据后，呈现于前端聚合网站，根据客户购买情况推荐商品</dd>
             <dt>项目职责</dt>
-            <dd>1. 记录用户对商品的浏览，收藏，购买，分享的行为，对每个行为根据经验设置一个权重，计算用户对这个商品的喜好度，运营人员在管理后台对商品加标签，通过标签计算商品间余弦相似度，每两小时计算一次，结果存放在redis中，用户刷新首页时，根据行为历史实时计算，top10喜好度商品相关度最高的推荐商品，推荐的商品也缓存在redis中，两小时过期。</dd>
+            <dd>1. 记录用户对商品的浏览，收藏，购买，分享的行为，对每个行为根据经验设置一个权重，计算用户对这个商品的喜好度，运营人员在管理后台对商品加标签，通过标签Bag of Words计算商品间余弦相似度，每两小时计算一次，结果存放在redis中，用户刷新首页时，根据行为历史实时计算，top10喜好度商品相关度最高的推荐商品，推荐的商品也缓存在redis中，两小时过期。</dd>
             <dd>2. 通过对用户行为(注册、登录、进入类目、浏览商品)记录的同期群模型，验证产品设计的合理性，D3js出统计图</dd>
             <dd>改进：a. 变换行为权值，分组用户，根据分组用户对推荐商品的点击率(同期群模型)，得出更优的权重。b. 推荐给用户所有喜好商品，记录用户对所有推荐商品的点击行为，再用逻辑回归计算改进标签权重。</dd>
           </dl>
@@ -201,6 +202,22 @@
             <dd>2. 英文分词stemming，url 和内容生成倒排索引，根据本页url和外链url，迭代计算各url的Rank。</dd>
             <dd>3. 爬完成后对单词计算TF-IDF</dd>
             <dd>4. 爬取结果dump到硬盘，搜索时，cache搜索，结果根据Rank*TF-IDF排序，用户可以搜索多个单词。</dd>
+          </dl>
+        </div>
+      </li>
+      <li>
+        <div class="project">
+          <h4>协议识别与阻断</h4><span class="period">( 2011.04 ~ 2011.06 )</span>
+          <dl>
+            <dt>编程环境</dt>
+            <dd>RedHat, Svn, Vim, C++(G++), L7-filter</dd>
+            <dt>项目描述</dt>
+            <dd>1. 识别内部与外部互联网之间交换的报文协议，阻断或欺骗特定网址的DNS查询。</dd>
+            <dd>2. L7-filter中正则表达式进行修正，精确匹配。</dd>
+            <dd>3. 对RRDtool二次开发，生成十几种协议的统计信息图像。</dd>
+            <dd>4. 用信号量提高DNS欺骗的速度，修改hash函数，提高框架性能。</dd>
+            <dt>项目职责</dt>
+            <dd>维护与更新代码</dd>
           </dl>
         </div>
       </li>
