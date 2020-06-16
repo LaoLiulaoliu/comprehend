@@ -140,17 +140,23 @@
           <h4>Crawler Framework</h4><span class="period">( 2016.05 ~ 2016.06 )</span>
           <dl>
             <dt>Environment</dt>
-            <dd>Ubuntu, Git, Vim, Postgresql, Redis, Django, Python(requests+lxml+cssselect), Fabric, Supervisor</dd>
-            <dt>crawl haodaifu.com</dt>
-            <dd>1. Website will block IP who access too frequently. I wanted to buy Amazon ec2 or IP proxy, but my boss did not give me any budget, so I found free proxy. Checking useful anonymous proxy, use gevent to solve checking slow problem.</dd>
-            <dd>2. python psycopg2 accessing DB is trivial, ORM performances is bad, I wrote a mongodb-like query module -- pgwrapper，submit to pypi</dd>
-            <dt>Python crawl wanfang medical literature data</dt>
-            <dd>1. Crack login captcha with PIL, easy number captcha just crop and compare the subimage, hard captcha have spots, adjoined jagged edge characters, use binarization, drop light gray spots, drop isolated spots, distinguish edge by gray difference</dd>
-            <dd>2. Distributed crawler, every work get tasks from redis, mark the finished one, requeue unfinished one. enqueue, dequeue, requeue, use 3 concurrent gevent coroutine</dd>
-            <dd>3. Extracting author Email of PDF, give feedback about pdfminer bug</dd>
-            <dd>4. Print, taceback, review source code, read log, pdb for debugging, parallel and concurrent program need more temporary log for debugging</dd>
-            <dt>Python crawl CFDA drugs</dt>
-            <dd>Django build a private management backend for unified drug metering</dd>
+            <dd>Ubuntu, Git, Postgresql, Redis, Cassandra, Python(requests+lxml+cssselect), Fabric, Supervisor</dd>
+            <dt>large scale, distributed crawler framework</dt>
+            <dd>1. Large scale, updateable, distributed caching data, regular crawling</dd>
+            <dd>2. Sharding redis queue by consistent hashing algorithm. Multiple commands are executed together in pipeline mode</dd>
+            <dd>3. AWS ec2 schedule crawler cluster, AWS s3 as cache layer, general download code</dd>
+            <dd>4. Special page analysis and configuration can finish one crawler </dd>
+            <dt>Tornado proxy pool service</dt>
+            <dd>1. Purchase proxy service to obtain large number of IP, do IP backup and blacklist work</dd>
+            <dd>2. According to different domains, record last use time of proxy IP, make full use of proxy IP</dd> 
+            <dt>Cache service, save webpage, trace crawling content</dt>
+            <dd>1. 4 kinds of cache services, based on filesystem, database, AWS s3, ucloud file</dd> 
+            <dd>2. Dynamically restart hundreds of machines, avoid been blocked by website. If one job fails, re-enqueue again. Throttling the crawling speed, traceback log can debug</dd> 
+            <dt>Some solutions</dt>
+            <dd>1. python psycopg2 accessing DB is trivial, ORM performances is bad, I wrote a mongodb-like query module -- pgwrapper，submit to pypi</dd>
+            <dd>2. Crack login captcha with PIL, digital captcha just crop and compare the subimage, complex captcha have spots, adjoined jagged edge characters, use binarization, drop light gray spots, drop isolated spots, distinguish edge by gray difference</dd>
+            <dd>3. Open file handler too many, modify ulimit in deploy code for redis server</dd>
+            <dd>4. JsV8 engine to resolve js format data.</dd>
           </dl>
       </li>
       <li>
@@ -158,11 +164,12 @@
           <h4>Patient management and service system</h4><span class="period">( 2015.06 ~ 2015.12 )</span>
           <dl>
             <dt>Environment</dt>
-            <dd>Debian, Git, IntelliJ IDEA, Java+Spring+Mybatis, iPython+Jupyter+Numpy+Pandas+Seaborn+Scikit-learn</dd>
+            <dd>Debian, Git, IntelliJ IDEA, Java+Spring+Mybatis, iPython+Jupyter+Numpy+Pandas+Seaborn+Scikit-learn, Spark</dd>
             <dt>Duty</dt>
-            <dd>Based on business logic, draw network topology diagram, program architecture diagram</dd>
-            <dd>In charge of join in Hospital Information System, provide data acquisition solution</dd>
-            <dd>Research on cleansing and mining, using kmeans to cluster different patients. The data have too many dimentions and very sparse, need medical support.</dd>
+            <dd>1. Based on business logic, draw network topology diagram, program architecture diagram. Provide data acquisition solution, build website based on Java</dd>
+            <dd>2. Research on data cleansing and explore, build data preprocessing rules.</dd>
+            <dd>3. Kmeans to cluster different patients. Spark linear regression to analysis disease development. </dd>
+            <dd>4. The sparse data have too many dimentions and missing values, better have medical support.</dd>
           </dl>
         </div>
       </li>
@@ -185,39 +192,16 @@
       </li>
       <li>
         <div class="project">
-          <h4>Data007 Taobao shop data analysis</h4><span class="period">( 2014.01 ~ 2014.05 )</span>
+          <h4>Overseas sales recommandation system</h4><span class="period">( 2012.08 ~ 2014.05 )</span>
           <dl>
             <dt>Environment</dt>
-            <dd>Mac(development)/Amazon ec2 ubuntu(production), Git, Vim, Python2.7, virtualenv, Redis, Cassandra</dd>
+            <dd>Ubuntu, Git, Vim, Python2.7, virtualenv, mongodb, Redis, selenium</dd>
             <dt>Description</dt>
-            <dd>crawl taobao, tmall data, doing statistics and show</dd>
+            <dd>Crawl Myhabit, Gilt, Ruelala, Amazon, Bestbuy... , extracting, classify, aggregation, display on the web after extraction, recommand products</dd>
             <dt>Duty</dt>
-            <dd>1. Based on open taobao API get all the categories we want.Two pipeline redis queue, one for shop info, the other for item info in the shop, requeue failed one. Save info to cassandra</dd>
-            <dd>2. Crawling mobile h5 page of taobao is still slow, found data in RESTful API without limiation, JsV8 engine to resolve js format data.</dd>
-            <dd>3. Reduce the crawl frequence exponentially for products and shops with no sale, cassandra is slow, so I put this strategy in redis with bit format data</dd>
-            <dd>4. Use hash_ring to realize a distributed redis, multiple similar commands use pipline of redis</dd>
-            <dd>5. Dynamically shutdown and power on Amazon ec2 as a crawler worker, avoid been blocked by taobao. Also use throttling to limit the rate of crawling taobao </dd>
-            <dd>6. Cassandra configuration, nodetool monitor, Hadoop/Hbase configuration, installation, usage</dd>
-          </dl>
-        </div>
-      </li>
-      <li>
-        <div class="project">
-          <h4>Favbuy overseas sale</h4><span class="period">( 2012.08 ~ 2014.05 )</span>
-          <dl>
-            <dt>Environment</dt>
-            <dd>Ubuntu(development)/Amazon ec2 ubuntu(production), Git, Vim, Python2.7, virtualenv, mongodb, Redis, selenium</dd>
-            <dt>Description</dt>
-            <dd>Crawl Myhabit, Gilt, Ruelala, Amazon, Bestbuy... , extracting, classify, aggregation, display on the web</dd>
-            <dt>Duty</dt>
-            <dd>1. Use requests+lxml, selenium, RESTful API to crawl more than 30 electronic commerce website</dd>
-            <dd>2. Assure the accuracy of data, build crawler data report and everyday new products report, find crawler bug or website update page framework</dd>
-            <dd>3. Crawlers as RPC server in 4 servers, RPC client manage crawlers running, both server and client message send to redis for processing</dd>
-            <dd>4. Deploy on Amazon EC2, monitor by Ganglia, guarantee all the server normal running, problem automatically sending by skype</dd>
-            <dd>5. Open file handler too many, modify ulimit in deploy code, later find rpc client open too many</dd>
-            <dd>6. Django unit test, RESTful API unit test</dd>
-            <dd>7. Recording user behavior of browse, love, buy, share, give them a weighted based on experience, calculating the fancy degree. Operation guy give goods different tags in backend, calculate the similarity of every two goods every two hours, save in redis. Calculate most related goods of top10 fancy goods when user access homepage, cache the recommendation.</dd>
-            <dd>Improvement: recommand related goods of all the fancy goods, not just top10, record which recommanded goods that user clicked, use logistic regression calculate the weighted of different user behaviors.</dd>
+            <dd>1. Recording user behavior of browse, love, buy, share, weighted behavior based on experience, calculating the user preferences. Operation guy tag goods in backend, calculate the cosine similarity of every two goods every two hours, save in redis. Calculate top10 most favorite goods when user access homepage, cached in redis and expired in 2 hours.</dd>
+            <dd>2. The rationality of product design is verified through Cohort model, based on users' behavior(registration, login, browse), d3js statistical chart</dd>
+            <dd>Improvement: a. Change behavior weight on diferent user group, verified by click rate. b. use logistic regression calculate the weighted of different user behaviors.</dd>
           </dl>
         </div>
       </li>
